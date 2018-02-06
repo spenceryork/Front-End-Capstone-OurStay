@@ -18,8 +18,8 @@
         <input type="text" class="formInput" placeholder="Note about your stay" ng-model="stay.note"><br>
         <button type="button" class="btn btn-secondary" ng-click="trackStay()">TRACK</button>
         <div>
-        <ng-map zoom="16" center="{{address}}" style="width:500px; height:300px">
-                <marker position="{{address}}" title="{{address}}"></marker>
+        <ng-map zoom="16" center="{{stay.address}}" style="width:500px; height:300px">
+                <marker position="{{stay.address}}" title="{{stay.address}}"></marker>
         </ng-map>
     </div>
 </div>

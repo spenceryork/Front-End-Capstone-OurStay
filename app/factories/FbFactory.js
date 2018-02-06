@@ -15,13 +15,19 @@ angular.module("OurStayApp").factory("FbFactory", ($http, $q) => {
        });
    }
 
-   function getPastStays(uid) {
+   function getPastStays() {
         return $q( (resolve, reject) => {
             $http
-            .get(`https://our-stay.firebaseio.com/stays.json?orderBy="uid"&equalTo="${uid}"`)
+            // .get(`https://our-stay.firebaseio.com/stays.json?orderBy="uid"&equalTo="${uid}"`)
+            .get(`https://our-stay.firebaseio.com/stays.json?`)
             .then( (data) => {
+                let keys = Object.keys(data.data);
+                    keys.forEach(key => {
+                        data.data[key].stayId = key;
+                    });
+                    let staysArr = Object.values(data.data);
                 console.log("getPastStays Data", data.data); 
-                resolve(data.data);
+                resolve(staysArr);
             })
             .catch( (error) => {
                 reject(error);
