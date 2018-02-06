@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>OurStay</title>
 </head>
 <body ng-app="OurStayApp">
-    <nav></nav>
-    <header>
-        <input type="text" placeholder="Search..." ng-model="search">
-    </header> 
+
+    <div class="nav" ng-include="'partials/nav.html'"></div>
     <div class="mainContainer">
         <h2>Our Stay</h2>
     </div>
-    <!-- Node module scripts    -->
+    <div ng-view></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJRTELj-M6DLZLvbScU-HoITcpDeczAM&libraries=places"></script>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
     <script src="node_modules/firebase/firebase.js"></script>
+    <script src="node_modules/ngmap/build/scripts/ng-map.min.js"></script>
     <!-- App scripts -->
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/values/fb-creds.js"></script>
     <!-- Factory Scripts -->
     <script src="app/factories/FbFactory.js"></script>
     <script src="app/factories/AuthFactory.js"></script>
+    <script src="app/factories/FilterFactory.js"></script>
     <!-- Controller Scripts -->
+    <script src="app/controllers/NavCtrl.js"></script>
     <script src="app/controllers/AddStayCtrl.js"></script>
     <script src="app/controllers/AuthCtrl.js"></script>
     <script src="app/controllers/EditStayCtrl.js"></script>

@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("OurStayApp", ["ngRoute"])
+angular.module("OurStayApp", ["ngRoute", "ngMap"])
     .config($routeProvider => {
         $routeProvider
         .when("/", {

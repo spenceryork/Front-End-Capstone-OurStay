@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("TodoApp").factory("AuthFactory", (FBCreds ,$q) => {
+angular.module("OurStayApp").factory("AuthFactory", (FBcreds ,$q) => {
 
     let authObj = {};
     let currentUser = null;
