@@ -8,7 +8,30 @@
 </head>
 <body ng-app="OurStayApp">
     <nav></nav>
-    <header></header> 
-    <div class="mainContainer"></div>   
+    <header>
+        <input type="text" placeholder="Search..." ng-model="search">
+    </header> 
+    <div class="mainContainer">
+        <h2>Our Stay</h2>
+    </div>
+    <!-- Node module scripts    -->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/firebase/firebase.js"></script>
+    <!-- App scripts -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/values/fb-creds.js"></script>
+    <!-- Factory Scripts -->
+    <script src="app/factories/FbFactory.js"></script>
+    <script src="app/factories/AuthFactory.js"></script>
+    <!-- Controller Scripts -->
+    <script src="app/controllers/AddStayCtrl.js"></script>
+    <script src="app/controllers/AuthCtrl.js"></script>
+    <script src="app/controllers/EditStayCtrl.js"></script>
+    <script src="app/controllers/IndividualStayCtrl.js"></script>
+    <script src="app/controllers/LandingCtrl.js"></script>
+    <script src="app/controllers/StayListCtrl.js"></script>
 </body>
 </html>
