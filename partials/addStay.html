@@ -1,0 +1,25 @@
+<div class="mainContainer">
+    <h2>Welcom to OurStay!</h2>
+    <h6>Remember where you've been</h6>
+    <nav class="navbar navbar-light">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" places-auto-complete size=80
+            component-restrictions="{country:'us'}"
+            types="{{types}}"
+            on-place-changed="placeChanged()">
+        </form>
+    </nav>
+    <div class="addStayForm">
+        <input type="text" class="formInput" placeholder="Name" ng-model="stay.name" ng-value="name"><br>
+        <input type="text" class="formInput" placeholder="Address" ng-model="stay.address" ng-value="address"><br>
+        <input type="text" class="formInput" placeholder="Website" ng-model="stay.website" ng-value="website"><br>
+        <input type="text" class="formInput" placeholder="How was your stay?" ng-model="stay.rating"><br>
+        <input type="text" class="formInput" placeholder="How did you book your stay?" ng-model="stay.bookedThrough"><br>
+        <input type="text" class="formInput" placeholder="Note about your stay" ng-model="stay.note"><br>
+        <button type="button" class="btn btn-secondary" ng-click="trackStay()">TRACK</button>
+        <div>
+        <ng-map zoom="16" center="{{address}}" style="width:500px; height:300px">
+                <marker position="{{address}}" title="{{address}}"></marker>
+        </ng-map>
+    </div>
+</div>

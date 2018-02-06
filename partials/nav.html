@@ -2,17 +2,14 @@
 <nav ng-controller="NavCtrl">
     <div class="navContainer">
         <div class="navbar flex-wrap">
-            <a href="#!/boards" class="logo">
+            <a href="#!/" class="logo">
                 <img src="{{logo}}" alt="OurStay" width="75px" height="75px">
             </a>
             <ul>
                 <li ng-repeat="item in navBar">
-                    <a ng-show="{{item.bang}}loggedIn" href="#" ng-click="navAuth(item.name)">{{item.name}}</a>
+                    <a href="#" ng-click="navAuth(item.name)">{{item.name}}</a>
                 </li>
             </ul>
-            <div>
-                <input class="search-bar" type="text" ng-model="searchTerm.searchTerm">
-            </div>
         </div>
     </div>
 </nav>
