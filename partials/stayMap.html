@@ -1,0 +1,18 @@
+<nav class="header">
+    <h4>Past Stays</h4>
+    <a href="#!/list">List</a>
+    <a href="#!/map">Map</a>
+</nav>
+<div class="mapContainer">
+    <ng-map zoom="4" center="[37.0902, -95.7129]" style="width:500px; height:300px">
+            <marker ng-repeat="stay in stays" position="{{stay.address}}" id={{stay.stayId}} on-click="showDetail(stay)"></marker>
+            <info-window id="stayInfoWindow">
+                <div ng-non-bindable>
+                    <h6>{{selectedStay.name}}</h6>
+                    <strong>Address:</strong> {{selectedStay.address}} <br>
+                    <strong>Your Review:</strong> {{selectedStay.rating}}
+                </div> 
+            </info-window>
+            <!-- <marker position="{{stay.address}}" title="{{stay.address}}"></marker> -->
+    </ng-map>
+</div>
