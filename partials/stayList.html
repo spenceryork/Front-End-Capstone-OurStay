@@ -1,7 +1,7 @@
 <nav class="header">
     <h4>Past Stays</h4>
-    <a href="#">List</a>
-    <a href="#">Map</a>
+    <a href="#!/list">List</a>
+    <a href="#!/map">Map</a>
 </nav>
 <div class="listContainer">
     <div class="searchDiv">
@@ -10,6 +10,9 @@
     <div class="stayCard" ng-repeat="stay in stays | filter: searchTerm.searchTerm">
         <a href="#">{{stay.name}}</a>
         <h6>{{stay.rating}}</h6>
-        <i class="fas fa-minus-circle fa-2x delete" ng-click=""></i>
+        <a href="#" class="delete" ng-click="deleteStay(stay.stayId)"><i class="fas fa-minus-circle fa-2x delete" ng-click=""></i></a>
+        <!-- Example of adding a conditional class  -->
+        <!-- ng-class="{'warning': task.status == 'Hold' , 'success': task.status == 'Completed', -->
+        <!-- 'active': task.status == 'Started', 'danger': task.status == 'Pending' } " -->
     </div>
 </div>

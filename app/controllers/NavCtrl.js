@@ -6,17 +6,21 @@ angular.module("OurStayApp").controller("NavCtrl", function($scope, AuthFactory,
 
     $scope.navBar = [
         {
-            name: "Add New"
+            name: "Add New",
+            url: "#!/home"
         },
         {
-            name: "View Past Stays"
+            name: "View Past Stays",
+            url: "#!/list"
         },
         {
             name: "Login",
-            bang: "!"
+            bang: "!",
+            url: "#!/login"
         },
         {
-            name: "Logout"
+            name: "Logout",
+            url: "#!/list"
         }
     ];
 

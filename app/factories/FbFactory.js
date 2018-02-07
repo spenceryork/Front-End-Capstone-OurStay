@@ -66,7 +66,7 @@ angular.module("OurStayApp").factory("FbFactory", ($http, $q) => {
     function deleteStay(stayId) {
         return $q( (resolve, reject) => {
             $http
-            .delete(`https://our-stay.firebaseio.com/stays/"${stayId}".json`)
+            .delete(`https://our-stay.firebaseio.com/stays/${stayId}.json`)
             .then( (data) => {
                 console.log("stay has been deleted"); 
                 resolve(data);
