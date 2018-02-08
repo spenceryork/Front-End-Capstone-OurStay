@@ -4,7 +4,9 @@ angular.module("OurStayApp").controller("StayMapCtrl", function($scope, FbFactor
 
     $scope.searchTerm = FilterFactory;
 
-    FbFactory.getPastStays()
+    let user = firebase.auth().currentUser.uid;
+
+    FbFactory.getPastStays(user)
     .then( (stays) => {
         $scope.stays = stays;
         console.log("data received by stayMap controller", stays);

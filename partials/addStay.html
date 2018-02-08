@@ -4,18 +4,12 @@
     <nav class="navbar navbar-light">
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" places-auto-complete size=80
-            component-restrictions="{country:'us', 'canada'}"
+            component-restrictions="{country:'us'}"
             types="{{types}}"
             on-place-changed="placeChanged()">
         </form>
     </nav>
     <div class="addStayForm">
-        <!-- <input type="text" class="formInput" placeholder="Name" ng-model="stay.name" ng-value="name"><br>
-        <input type="text" class="formInput" placeholder="Address" ng-model="stay.address" ng-value="address"><br>
-        <input type="text" class="formInput" placeholder="Website" ng-model="stay.website" ng-value="website"><br>
-        <input type="text" class="formInput" placeholder="How was your stay?" ng-model="stay.rating"><br>
-        <input type="text" class="formInput" placeholder="How did you book your stay?" ng-model="stay.bookedThrough"><br>
-        <input type="text" class="formInput" placeholder="Note about your stay" ng-model="stay.note"><br> -->
         <form>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Name:</label>

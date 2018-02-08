@@ -1,11 +1,26 @@
 "use strict";
 
+let isAuth = (AuthFactory) => {
+    return new Promise ( (resolve, reject) => {
+        AuthFactory.isAuthenticated()
+        .then( (ifUser) => {
+            console.log("is user logged in", ifUser);
+            if (ifUser) {
+                resolve();
+            } else {
+                reject();
+            }
+        });
+    });
+};
+
 angular.module("OurStayApp", ["ngRoute", "ngMap"])
     .config($routeProvider => {
         $routeProvider
         .when("/", {
-            templateUrl: "partials/landing.html",
-            controller: "LandingCtrl"
+            templateUrl: "partials/addStay.html",
+            controller: "AddStayCtrl",
+            resolve: { isAuth }
         })
         .when("/login", {
             templateUrl: "partials/login.html",
@@ -13,23 +28,28 @@ angular.module("OurStayApp", ["ngRoute", "ngMap"])
         })
         .when("/home", {
             templateUrl: "/partials/addStay.html",
-            controller: "AddStayCtrl"
+            controller: "AddStayCtrl",
+            resolve: { isAuth }
         })
         .when("/list", {
             templateUrl: "/partials/stayList.html",
-            controller: "StayListCtrl"
+            controller: "StayListCtrl",
+            resolve: { isAuth }
         })
         .when("/map", {
             templateUrl: "/partials/stayMap.html",
-            controller: "StayMapCtrl"
+            controller: "StayMapCtrl",
+            resolve: { isAuth }
         })
         .when("/stay/:stayId", {
             templateUrl: "/partials/individualStay.html",
-            controller: "IndividualStayCtrl"
+            controller: "IndividualStayCtrl",
+            resolve: { isAuth }
         })
         .when("/edit/:stayId", {
             templateUrl: "/partials/editStay.html",
-            controller: "EditStayCtrl"
+            controller: "EditStayCtrl",
+            resolve: { isAuth }
         })
         .otherwise("/");
     })
