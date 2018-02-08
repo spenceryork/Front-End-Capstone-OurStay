@@ -1,5 +1,5 @@
 
-<nav ng-controller="NavCtrl">
+<!-- <nav ng-controller="NavCtrl">
     <div class="navContainer">
         <div class="navbar flex-wrap">
             <a href="#!/" class="logo">
@@ -12,4 +12,13 @@
             </ul>
         </div>
     </div>
+</nav> -->
+
+<nav class="navbar" ng-controller="NavCtrl">
+    <ul class="nav justify-content-end">
+        <li class="nav-item" ng-repeat="item in navBar"> 
+            <a class="nav-link" href="{{item.url}}">{{item.name}}</a>
+        </li>
+    </ul>
 </nav>
+

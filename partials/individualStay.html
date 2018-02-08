@@ -1,0 +1,29 @@
+<div class="individualStayContainer">
+    <div class="stayHeader">
+        <h4>{{stay.name}}</h4>
+    </div>
+    <div class="stayDetails">
+        <h6>Address:</h6>
+        <img src="" alt="">
+        <span>{{stay.name}}</span>
+        <h6>Type:</h6>
+        <span>{{stay.type}}</span>
+        <h6>Your Review:</h6>
+        <span>{{stay.review}}</span><br>
+        <h6>Notes:</h6>
+        <span>{{stay.note}}</span><br>
+        <a href="{{stay.website}}" ng-hide="!stay.website">View Site</a>
+    </div>
+    <button type="button" class="btn btn-secondary"><a ng-href="#!/edit/{{stay.stayId}}">EDIT</a></button>
+    <ng-map zoom="16" center="{{stay.address}}" style="width:500px; height:300px">
+            <marker position="{{stay.address}}" id={{stay.stayId}} on-click="showDetail(stay)"></marker>
+            <!-- <info-window id="stayInfoWindow">
+                <div ng-non-bindable>
+                    <h6>{{selectedStay.name}}</h6>
+                    <strong>Address:</strong> {{selectedStay.address}} <br>
+                    <strong>Your Review:</strong> {{selectedStay.rating}}
+                </div> 
+            </info-window> -->
+            <!-- <marker position="{{stay.address}}" title="{{stay.address}}"></marker> -->
+    </ng-map>
+</div>
