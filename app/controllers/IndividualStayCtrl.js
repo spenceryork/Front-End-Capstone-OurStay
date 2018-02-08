@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("OurStayApp").controller("IndividualStayCtrl", function($scope, FbFactory, FilterFactory, $route, $routeParams, $window){
+angular.module("OurStayApp").controller("IndividualStayCtrl", function($scope, FbFactory, FilterFactory, $route, $routeParams, $window, $location){
 
     FbFactory.getStayDetails($routeParams.stayId)
     .then( (stay) => {
@@ -11,6 +11,9 @@ angular.module("OurStayApp").controller("IndividualStayCtrl", function($scope, F
 
     $scope.redirectToSite = function(stayWebsite) {
         console.log("what is staywebsite", stayWebsite);
-        $window.open(stayWebsite);
+        $window.open(stayWebsite, "_blank");
+        console.log("routeParam.stayId", $routeParams.stayId);
+        console.log(`/stay/${$routeParams.stayId}` )
+        $location.url(`/stay/${$routeParams.stayId}`);
     };
 });
