@@ -6,8 +6,8 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
         name: "",
         address: "",
         website: "",
-        rating: "",
-        bookedThrough: "",
+        type: "",
+        review: "",
         note: ""
     };
     
@@ -27,6 +27,7 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
 
 
     $scope.trackStay = function() {
+        console.log($scope.stay);
         FbFactory.addStay($scope.stay)
         .then( () => {
             $location.url("/list");

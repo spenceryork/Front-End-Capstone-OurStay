@@ -38,10 +38,10 @@ angular.module("OurStayApp").factory("FbFactory", ($http, $q) => {
     function getStayDetails(stayId) {
         return $q( (resolve, reject) => {
             $http
-            .get(`https://our-stay.firebaseio.com/stays/"${stayId}".json`)
+            .get(`https://our-stay.firebaseio.com/stays/${stayId}.json`)
             .then( (data) => {
                 console.log("getStayDetails", data); 
-                resolve(data);
+                resolve(data.data);
             })
             .catch( (error) => {
                 reject(error);
@@ -52,7 +52,7 @@ angular.module("OurStayApp").factory("FbFactory", ($http, $q) => {
     function updateStayDetails(stayId, stay) {
         return $q( (resolve, reject) => {
             $http
-            .put(`https://our-stay.firebaseio.com/stays/"${stayId}".json`, JSON.stringify(stay) )
+            .put(`https://our-stay.firebaseio.com/stays/${stayId}.json`, JSON.stringify(stay) )
             .then( (data) => {
                 console.log("getStayDetails", data); 
                 resolve(data);

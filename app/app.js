@@ -24,11 +24,11 @@ angular.module("OurStayApp", ["ngRoute", "ngMap"])
             controller: "StayMapCtrl"
         })
         .when("/stay/:stayId", {
-            templateUrl: "/partials/stayList.html",
+            templateUrl: "/partials/individualStay.html",
             controller: "IndividualStayCtrl"
         })
-        .when("/edit", {
-            templateUrl: "/partials/stayList.html",
+        .when("/edit/:stayId", {
+            templateUrl: "/partials/editStay.html",
             controller: "EditStayCtrl"
         })
         .otherwise("/");
