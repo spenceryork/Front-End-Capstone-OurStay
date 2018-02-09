@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("OurStayApp").factory("AuthFactory", (FBcreds ,$q) => {
+angular.module("OurStayApp").factory("AuthFactory", (FBcreds ,$q, $location) => {
     
     let authObj = {};
     let currentUser = null;
@@ -28,6 +28,8 @@ angular.module("OurStayApp").factory("AuthFactory", (FBcreds ,$q) => {
     authObj.logout = () => {
         firebase.auth().signOut().then(function() {
             console.log("User has been logged out:");
+            // $location.url("/login.html");
+
             // Sign-out successful.
           }).catch(function(error) {
             // An error happened.
@@ -57,11 +59,11 @@ angular.module("OurStayApp").factory("AuthFactory", (FBcreds ,$q) => {
     };
 
     authObj.isAuthenticated = () => {
-        console.log("isAuthenticated called AuthFactory");
+        // console.log("isAuthenticated called AuthFactory");
         return $q((resolve, reject) => {
-          console.log("firing onAuthStateChanged");
+        //   console.log("firing onAuthStateChanged");
           firebase.auth().onAuthStateChanged( (user) => {
-            console.log("onAuthStateChanged finished");
+            // console.log("onAuthStateChanged finished");
             if (user) {
               console.log("user", user);
               currentUser = user.uid;
