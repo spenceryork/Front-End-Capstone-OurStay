@@ -1,8 +1,14 @@
 body {
     background-color: white;
+    height: 100%;
 }
 
 // LOGIN PAGE
+
+.loginContainer {
+    background-image: url("../images/downtown.png");
+    background-size: 900px;
+ }
 
 .loginButtons {
     margin-top: 25px;
@@ -14,19 +20,21 @@ body {
 .loginForm {
     margin-left: 75px;
     padding-right: 50px;
-    h6 {
-        padding-top: 20px;
-    }
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
     button {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    h6 {
+        padding-top: 25px;
     }
 }
 
 .credentials {
     padding-right: 75px;
-    // box-shadow: 10px 0 5px -1px #888;
-    border-right: 2px solid rgb(80, 79, 79);
+    border-right: 2px solid rgb(146, 146, 146);
     input {
     width: 300px;
     }
