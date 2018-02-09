@@ -1,13 +1,22 @@
-<h2>Login</h2>
+<div>
+    <h2>Login</h2>
+    <div class="loginForm d-flex flex-row justify-content-left">
+        <div class="credentials">
+            <h6>Username:</h6>
+            <input type="text" class="form-control" id="email" ng-model="user.email" autofocus="true">
+            <h6>Password:</h6>
+            <input type="text" class="form-control" id="password" ng-model="user.password">
+            <div class="loginButtons">
+                <button type="button" class="btn btn-secondary btn-lg btn-block" ng-click="loginWithEmail()">LOGIN</button>
+                <button type="button" class="btn btn-secondary btn-lg btn-block" ng-click="registerNewUser()">REGISTER</button>
+            </div>
+        </div>
+        <div class="googleCredentials">
+            <text>Or sign in with Google</text><br>
+            <a href="#"><img id="googleSignIn" ng-src="../images/btn_google_signin_light_normal_web.png" ng-click="googleLoginAuth()"/></a>
+        </div>
+    </div>
 
-<h6>Username:</h6>
-<input type="text" class="form-control" id="email" ng-model="user.email" autofocus="true">
-
-<h6>Password:</h6>
-<input type="text" class="form-control" id="password" ng-model="user.password">
-
-<button type="button" class="btn btn-secondary" ng-click="loginWithEmail()">LOGIN</button>
-<button type="button" class="btn btn-secondary" ng-click="registerNewUser()">REGISTER</button>
-<img id="googleSignIn" ng-src="../images/btn_google_signin_light_normal_web.png" ng-click="googleLoginAuth()"/>
+</div>
 
 

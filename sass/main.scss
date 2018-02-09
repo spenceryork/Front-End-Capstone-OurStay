@@ -1,3 +1,63 @@
 body {
     background-color: lightblue;
 }
+
+// LOGIN PAGE
+
+.loginButtons {
+    margin-top: 25px;
+    margin: auto;
+    width: 190px;
+    // background-color: red;
+}
+
+.loginForm {
+    margin-left: 75px;
+    padding-right: 50px;
+    h6 {
+        padding-top: 20px;
+    }
+    button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.credentials {
+    padding-right: 75px;
+    // box-shadow: 10px 0 5px -1px #888;
+    border-right: 2px solid rgb(80, 79, 79);
+    input {
+    width: 300px;
+    }
+}
+
+.googleCredentials {
+    padding-top: 18px;
+    padding-left: 75px;
+}
+
+
+// LIST PAGE
+
+.listTable {
+    width: 100%;
+    td {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+// ADD STAY
+
+.addStayForm {
+    width: 40%;
+    padding-left: 25px;
+}
+
+.addMap {
+    margin-top: 75px;
+    margin-left: 25px;
+    margin-right: 0;
+}
+ 
