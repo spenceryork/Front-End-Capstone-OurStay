@@ -1,5 +1,5 @@
 
-<nav class="navbar" ng-controller="NavCtrl">
+<nav class="navbar justify-content-end" ng-controller="NavCtrl">
     <ul class="nav justify-content-end">
         <li class="nav-item" ng-repeat="item in navBar"> 
             <a class="nav-link" ng-click="go(item.url)" ng-show="{{item.bang}}loggedIn" href="{{item.url}}">{{item.name}}</a>
