@@ -33,4 +33,13 @@ angular.module("OurStayApp").controller("NavCtrl", function($scope, AuthFactory,
         }
     };
 
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            $scope.$apply($scope.loggedIn = true);
+        } else {
+            $scope.loggedIn = false;
+            $scope.$apply();
+        }
+    });
+
 });
