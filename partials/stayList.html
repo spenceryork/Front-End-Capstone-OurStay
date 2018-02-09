@@ -7,12 +7,28 @@
     <div class="searchDiv">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ng-model="searchTerm.searchTerm">
     </div>
-    <div class="stayCard" ng-repeat="stay in stays | filter: searchTerm.searchTerm">
-        <a href="#!/stay/{{stay.stayId}}">{{stay.name}}</a>
-        <h6>{{stay.review}}</h6>
-        <a href="#" class="delete" ng-click="deleteStay(stay.stayId)"><i class="fas fa-minus-circle fa-2x delete" ng-click=""></i></a>
-        <!-- Example of adding a conditional class  -->
-        <!-- ng-class="{'warning': task.status == 'Hold' , 'success': task.status == 'Completed', -->
-        <!-- 'active': task.status == 'Started', 'danger': task.status == 'Pending' } " -->
-    </div>
+    <!-- <div class="d-flex flex-column list">
+        <div class="d-flex flex-row justify-content-between stayCard" ng-repeat="stay in stays | filter: searchTerm.searchTerm">
+            <i ng-class="{'fas fa-tree fa-2x': stay.type == 'Campsite', 'fas fa-home fa-2x': stay.type == 'AirBnb', 'fas fa-building fa-2x': stay.type == 'Hotel'}"></i>
+            <a href="#!/stay/{{stay.stayId}}">{{stay.name}}</a>
+            <h6>{{stay.review}}</h6>
+            <a href="#" class="delete" ng-click="deleteStay(stay.stayId)"><i class="fas fa-minus-circle fa-2x delete" ng-click=""></i></a>
+        </div>
+    </div> -->
+    <table class="listTable" cellspacing="10">
+       <tr ng-repeat="stay in stays | filter: searchTerm.searchTerm">
+            <td width="10%" align="center">
+                <i ng-class="{'fas fa-tree fa-2x': stay.type == 'Campsite', 'fas fa-home fa-2x': stay.type == 'AirBnb', 'fas fa-building fa-2x': stay.type == 'Hotel'}"></i>
+            </td>
+            <td width="40%">
+                <a href="#!/stay/{{stay.stayId}}">{{stay.name}}</a>  
+            </td>
+            <td width="40%">
+                <h6>{{stay.review}}</h6>
+            </td>
+            <td width="10%" align="center">
+                <a href="#" class="delete" ng-click="deleteStay(stay.stayId)"><i class="fas fa-minus-circle fa-2x delete" ng-click=""></i></a>
+            </td>
+       </tr>
+    </table>
 </div>
