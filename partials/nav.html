@@ -1,9 +1,12 @@
 
-<nav class="navbar justify-content-end" ng-controller="NavCtrl">
+<nav class="navbar" ng-controller="NavCtrl">
+    <a class="navbar-brand logo" href="#">OurStay</a>
     <ul class="nav justify-content-end">
-        <li class="nav-item" ng-repeat="item in navBar"> 
-            <a class="nav-link" ng-click="go(item.url)" ng-show="{{item.bang}}loggedIn" href="{{item.url}}">{{item.name}}</a>
-        </li>
+            <li class="nav-item" ng-repeat="item in navBar"> 
+                <a class="nav-link" ng-click="go(item.url)" ng-show="{{item.bang}}loggedIn" href="{{item.url}}">{{item.name}}</a>
+            </li>
+        </div>
     </ul>
 </nav>
+
 
