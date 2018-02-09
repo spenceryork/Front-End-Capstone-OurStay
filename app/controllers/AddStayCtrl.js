@@ -9,7 +9,8 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
         type: "",
         review: "",
         note: "",
-        uid: ""
+        uid: "",
+        url: ""
     };
     
     $scope.placeChanged = function() {

@@ -2,6 +2,13 @@
     <div class="stayHeader">
         <h4>{{stay.name}}</h4>
     </div>
+    <!-- <div>
+        <img ng-src="{{stay.url || stay.type == 'Hotel' && '../images/soren-astrup-jorgensen-241830.jpg, stay.type == 'Campsite' && '../images/adore-chang-178629.jpg', stay.type == 'AirBnb' && '../images/loft-apartment-near-downtown-and-wsu.jpg'}}"/>
+    </div> -->
+    <div class="individualImage">
+        <span ng-show></span>
+        <img ng-src="{{stay.url || '../images/stock-photo.png'}}"/>
+    </div>
     <div class="stayDetails">
         <h6>Address:</h6>
         <span>{{stay.address}}</span>
@@ -13,7 +20,6 @@
         <span>{{stay.note}}</span><br>
         <!-- <a href="{{stay.website}}" ng-hide="!stay.website">View Site</a> -->
         <a href="#!/stay/{{stay.stayId}}" ng-click="redirectToSite(stay.website, '_blank')" ng-hide="!stay.website">View Site</a>
-
     </div>
     <button type="button" class="btn btn-secondary"><a ng-href="#!/edit/{{stay.stayId}}">EDIT</a></button>
     <ng-map zoom="16" center="{{stay.address}}" style="width:500px; height:300px">
