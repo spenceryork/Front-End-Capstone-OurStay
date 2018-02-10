@@ -26,6 +26,10 @@ angular.module("OurStayApp", ["ngRoute", "ngMap"])
             templateUrl: "partials/login.html",
             controller: "AuthCtrl"
         })
+        .when("/landing", {
+            templateUrl: "partials/landing.html",
+            controller: "LandingCtrl"
+        })
         .when("/home", {
             templateUrl: "/partials/addStay.html",
             controller: "AddStayCtrl",
