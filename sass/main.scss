@@ -3,6 +3,18 @@ body {
     height: 100%;
 }
 
+
+// LADNING PAGE
+
+.headingContainer {
+    background-image: url("../images/SANFRAN.png");
+    background-size: 100%;
+    height: 400px;
+    color: white;
+    h1 {
+        color: white;
+    }
+}
 // LOGIN PAGE
 
 .loginContainer {
@@ -18,7 +30,7 @@ body {
 }
 
 .loginForm {
-    
+
     margin-left: 75px;
     padding-right: 50px;
     color: white;
