@@ -30,8 +30,12 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
         FbFactory.addStay($scope.stay)
         .then( () => {
             $location.url("/list");
-        });
-    };
-
+            // $scope.redirect = function(){$('#addStayModal').modal('hide');
+            // $window.setTimeout (function() {
+                // $window.location.href = '#!/list';},1000);};
+            });
+        };
+        
+    // $('#addStayModal').modal('hide');
 
 });

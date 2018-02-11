@@ -16,7 +16,7 @@ angular.module("OurStayApp").controller("StayListCtrl", function($scope, FbFacto
         FbFactory.deleteStay(stayId)
         .then( (data) => {
             console.log("data has been deleted");
-            $location.path("/list");
+            $route.reload("/list");
         });
     };
 

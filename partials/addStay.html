@@ -19,7 +19,38 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.address" ng-value="address">
                     <label for="exampleFormControlInput1">Website:</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.website" ng-value="website">
-                    <label for="exampleFormControlSelect1">Type:</label>
+                    <!-- <label for="exampleFormControlSelect1">Type:</label>
+                        <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.type">
+                            <option>Hotel</option>
+                            <option>AirBnb</option>
+                            <option>Campsite</option>
+                        </select>
+                    <label for="exampleFormControlSelect1">Your Review:</label>
+                        <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.review">
+                            <option>Stay here again</option>
+                            <option>Okay, but not great</option>
+                            <option>Run away</option>
+                        </select>
+                    <label for="exampleFormControlInput1">Personal Note:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add a personal note about your stay..." ng-model="stay.note"> -->
+                </div>
+                <!-- <button type="button" class="btn btn-secondary" ng-click="trackStay()">TRACK</button> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStayModal">TRACK</button>
+            </form>
+        </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="addStayModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">TRACK YOUR STAY</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label for="exampleFormControlSelect1">Type:</label>
                         <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.type">
                             <option>Hotel</option>
                             <option>AirBnb</option>
@@ -33,10 +64,14 @@
                         </select>
                     <label for="exampleFormControlInput1">Personal Note:</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add a personal note about your stay..." ng-model="stay.note">
-                </div>
-                <button type="button" class="btn btn-secondary" ng-click="trackStay()">TRACK</button>
-            </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="trackStay()">Save changes</button>
+            </div>
+          </div>
         </div>
+      </div>
         <div class="addMap">
             <ng-map zoom="16" center="{{stay.address}}" style="width:500px; height:300px">
                     <marker position="{{stay.address}}" title="{{stay.address}}"></marker>
@@ -44,3 +79,7 @@
         </div>
     </div>
 </div>
+
+<!-- $scope.redirect = function(){$('#additem').modal('hide');
+window.setTimeout (function() {
+window.location.href = 'http://www.google.com';},1000);} -->
