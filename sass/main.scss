@@ -21,6 +21,28 @@ body {
         color: white;
     }
 }
+
+// .border {
+//     border: solid white 1px;
+// }
+
+.cardContainer {
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.landingCard {
+    margin-left: 10px;
+    h5 {
+        text-align: center;
+        color: black;
+        // border-bottom: 1px solid black;
+    }
+}
 // LOGIN PAGE
 
 .loginContainer {
@@ -93,5 +115,19 @@ body {
         height: 300px;
         width: 500px;
     }
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+// STAY LIST PAGE
+
+.delete {
+    color: rgb(190, 2, 2);
 }
  
