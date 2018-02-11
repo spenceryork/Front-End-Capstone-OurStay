@@ -28,8 +28,6 @@ angular.module("OurStayApp").factory("AuthFactory", (FBcreds ,$q, $location) => 
     authObj.logout = () => {
         firebase.auth().signOut().then(function() {
             console.log("User has been logged out:");
-            // $location.url("/login.html");
-
             // Sign-out successful.
           }).catch(function(error) {
             // An error happened.

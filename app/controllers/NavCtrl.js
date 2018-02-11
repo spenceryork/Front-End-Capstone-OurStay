@@ -20,7 +20,7 @@ angular.module("OurStayApp").controller("NavCtrl", function($scope, AuthFactory,
         },
         {
             name: "Logout",
-            url: "#!/logout"
+            url: "#!/landing"
         }
     ];
 
