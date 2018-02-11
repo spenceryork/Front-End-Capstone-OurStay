@@ -1,8 +1,16 @@
-<nav class="header">
-    <h4>Past Stays</h4>
-    <a href="#!/list">List</a>
-    <a href="#!/map">Map</a>
-</nav>
+<nav class="align-items-end listNavHeader">
+        <h4>Past Stays</h4>
+        <div class="navTabs">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/list">List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#!/map"><strong>Map</strong></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 <div class="mapContainer">
     <ng-map zoom="4" center="[37.0902, -95.7129]" style="width:500px; height:300px">
             <marker ng-repeat="stay in stays" position="{{stay.address}}" id="{{stay.stayId}}" on-click="showDetail(stay)"></marker>

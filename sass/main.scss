@@ -3,6 +3,18 @@ body {
     height: 100%;
 }
 
+// NAV
+
+
+
+.navbar {
+    background-color: #f4f4f4;
+    a {
+        color: #373737;
+
+    }
+}
+
 
 // LADNING PAGE
 
@@ -22,9 +34,6 @@ body {
     }
 }
 
-// .border {
-//     border: solid white 1px;
-// }
 
 .cardContainer {
     margin-top: 25px;
@@ -88,6 +97,23 @@ body {
 
 
 // LIST PAGE
+
+.listNavHeader {
+    background-color: #dcd0c0;;
+    h4 {
+        margin-bottom: 0;
+        color: #c0b283;
+        text-align: center;
+    }
+}
+
+.navTabs {
+    background-color: #dcd0c0;
+    padding-left: 25px;
+    a {
+        color: #c0b283;
+    }
+}
 
 .listTable {
     width: 100%;
