@@ -24,9 +24,9 @@ angular.module("OurStayApp").controller("NavCtrl", function($scope, AuthFactory,
         }
     ];
 
-    $scope.go = navUrl => {
+    $scope.go = (navUrl) => {
         console.log("navUrl", navUrl);
-        if (navUrl === "#!/logout") {
+        if (navUrl === "#!/landing") {
           AuthFactory.logout();
         } else {
           $window.location.href = navUrl;
