@@ -123,6 +123,10 @@ body {
     }
 }
 
+.delete {
+    color: rgb(190, 2, 2);
+}
+
 // ADD STAY
 
 .addStayForm {
@@ -136,12 +140,6 @@ body {
     margin-right: 0;
 }
 
-.individualImage {
-    img {
-        height: 300px;
-        width: 500px;
-    }
-}
 
 footer {
     text-align: center;
@@ -151,9 +149,64 @@ footer {
     left: 0;
 }
 
-// STAY LIST PAGE
+// INDIVIDUAL PAGE
 
-.delete {
-    color: rgb(190, 2, 2);
+.individualImage {
+    img {
+        height: 200px;
+        width: 350px;
+    }
 }
+
+.individualStayContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // margin-left: 25px;
+    width: 100%;
+    // background-color: #dcd0c0;
+    background-image: url("../images/individual.png");
+    background-size: 900px;
+    h3 {
+        margin-top: 20px;
+        margin-left: 57px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+}
+
+.individualCard {
+    align-self: flex-start;
+    width: 470px;
+    text-align: center;
+    background-color: white;
+    h6 {
+        padding: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.viewSite {
+    a {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+.individualMapContainer {
+
+    width: 60%;
+    // background-color: #dcd0c0;
+    
+}
+.individualMap {
+    margin: 0 auto;
+    width: 400px; 
+    height: 250px;
+}
+
+
+
+
+
  
