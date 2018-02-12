@@ -25,7 +25,13 @@
         </div>
     </div> -->
     <table class="listTable" cellspacing="10">
-       <tr ng-repeat="stay in stays | filter: searchTerm.searchTerm">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Review</th>
+            <th>Price / Night</th>
+        </tr>
+        <tr ng-repeat="stay in stays | filter: searchTerm.searchTerm">
             <td width="10%" align="center">
                 <i ng-class="{'fas fa-tree fa-2x': stay.type == 'Campsite', 'fas fa-home fa-2x': stay.type == 'AirBnb', 'fas fa-building fa-2x': stay.type == 'Hotel'}"></i>
             </td>
@@ -36,7 +42,7 @@
                 <h6>{{stay.review}}</h6>
             </td>
             <td width="20%">
-                    <h6>{{stay.price}} / Night</h6>
+                    <h6>${{stay.price}}</h6>
                 </td>
             <td width="10%" align="center">
                 <a class="delete" ng-click="deleteStay(stay.stayId)"><i class="fas fa-minus-circle fa-2x delete"></i></a>
