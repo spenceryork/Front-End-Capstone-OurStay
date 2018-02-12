@@ -9,6 +9,8 @@ angular.module("OurStayApp").controller("StayListCtrl", function($scope, FbFacto
     FbFactory.getPastStays(user)
     .then( (stays) => {
         $scope.stays = stays;
+        let recentStay = stays.pop();
+        console.log("last stay added", recentStay);
         console.log("data received by staylist controller", stays);
     });
 

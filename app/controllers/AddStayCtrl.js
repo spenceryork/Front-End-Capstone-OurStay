@@ -7,6 +7,7 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
         address: "",
         website: "",
         type: "",
+        price: "",
         review: "",
         note: "",
         uid: "",
@@ -24,18 +25,15 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
         console.log('Place Data', place);
     };
 
-
     $scope.trackStay = function() {
         $scope.stay.uid = firebase.auth().currentUser.uid;
         FbFactory.addStay($scope.stay)
         .then( () => {
-            $location.url("/list");
-            // $scope.redirect = function(){$('#addStayModal').modal('hide');
-            // $window.setTimeout (function() {
-                // $window.location.href = '#!/list';},1000);};
-            });
-        };
+            $window.setTimeout (function() {
+                $window.location.href = '#!/list';
+            },500);
+        });
+    };
         
-    // $('#addStayModal').modal('hide');
 
 });
