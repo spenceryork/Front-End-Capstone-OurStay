@@ -15,7 +15,6 @@ angular.module("OurStayApp").controller("StayMapCtrl", function($scope, FbFactor
 
     $scope.showDetail = function(e, selectedStay) {
         $scope.selectedStay = selectedStay;
-        // console.log("What is selectedStay", $scope.selectedStay.stayId);
         $scope.map.showInfoWindow("stayInfoWindow", selectedStay.stayId);
       };
     
