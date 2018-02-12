@@ -27,11 +27,11 @@
     <table class="listTable" cellspacing="10">
         <tr>
             <th></th>
-            <th>Name</th>
-            <th>Review</th>
-            <th>Price / Night</th>
+            <th ng-click="sortData('name')">Name<div ng-class="getSortClass('name')"></div></th>
+            <th ng-click="sortData('review')">Review<div ng-class="getSortClass('review')"></div></th>
+            <th ng-click="sortData('price')">Price<div ng-class="getSortClass('price')"></div></th>
         </tr>
-        <tr ng-repeat="stay in stays | filter: searchTerm.searchTerm">
+        <tr ng-repeat="stay in stays | filter: searchTerm.searchTerm | orderBy:sortColumn:reverseSort">
             <td width="10%" align="center">
                 <i ng-class="{'fas fa-tree fa-2x': stay.type == 'Campsite', 'fas fa-home fa-2x': stay.type == 'AirBnb', 'fas fa-building fa-2x': stay.type == 'Hotel'}"></i>
             </td>
