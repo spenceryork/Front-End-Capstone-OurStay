@@ -10,8 +10,8 @@ angular.module("OurStayApp").controller("EditStayCtrl", function($scope, FbFacto
     });
 
     $scope.updateStay = function() {
-        // let price = $scope.stay.price.replace(/[!@#$%^&*]/g, "");
-        // $scope.stay.price = parseFloat(price).toFixed(2);
+        let price = $scope.stay.price.replace(/[!@#$%^&*]/g, "");
+        $scope.stay.price = parseFloat(price).toFixed(2);
         FbFactory.updateStayDetails($routeParams.stayId, $scope.stay)
         .then( () => {
             $location.url(`/stay/${$routeParams.stayId}`);
