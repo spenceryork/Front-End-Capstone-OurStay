@@ -189,7 +189,7 @@ table {
     background-color: #dcd0c0;
     margin: auto;
     a {
-        color: #c0b283;
+        color: white;
     }
 }
 
@@ -247,6 +247,28 @@ th {
     border-right: 5px solid transparent;
     border-top: 10px solid white;
     display: inline-block;
+}
+
+// MAP PAGE
+
+.mapContainer {
+    margin-top: 25px;
+    margin-left: 25px;
+    width: 90%;
+}
+
+.viewController {
+    border: 1px solid black;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    h5 {
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+}
+
+.radios {
+    margin-left: 25px;
 }
 
 // ADD STAY
