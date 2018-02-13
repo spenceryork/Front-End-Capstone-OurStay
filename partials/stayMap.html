@@ -12,8 +12,14 @@
         </div>
     </nav>
 <div class="mapContainer">
+    <div class="radios">
+        <input type="radio" ng-model="value" value="All" ng-change="getCorrectStays()" ng-checked="value==item">All
+        <input type="radio" ng-model="value" value="Hotel" ng-change="getCorrectStays()">Hotel
+        <input type="radio" ng-model="value" value="AirBnb" ng-change="getCorrectStays()">AirBnb
+        <input type="radio" ng-model="value" value="Campsite" ng-change="getCorrectStays()">Campsite
+    </div>
     <ng-map zoom="4" center="[37.0902, -95.7129]" style="width:500px; height:300px">
-            <marker ng-repeat="stay in stays" position="{{stay.address}}" id="{{stay.stayId}}" on-click="showDetail(stay)"></marker>
+            <marker ng-repeat="stay in CorrectStays" position="{{stay.address}}" id="{{stay.stayId}}" on-click="showDetail(stay)"></marker>
             <info-window id="stayInfoWindow">
                 <div ng-non-bindable>
                     <h6>{{selectedStay.name}}</h6>
@@ -23,6 +29,41 @@
                     <a href="#!/stay/{{selectedStay.stayId}}">View Details</a>
                 </div> 
             </info-window>
-            <!-- <marker position="{{stay.address}}" title="{{stay.address}}"></marker> -->
     </ng-map>
+    <!-- <ng-map ng-show="value == 'Hotel'"zoom="4" center="[37.0902, -95.7129]" style="width:500px; height:300px">
+            <marker ng-repeat="stay in hotelStaysArr" position="{{stay.address}}" id="{{stay.stayId}}" on-click="showDetail(stay)"></marker>
+            <info-window id="stayInfoWindow">
+                <div ng-non-bindable>
+                    <h6>{{selectedStay.name}}</h6>
+                    <strong>Address:</strong> {{selectedStay.address}} <br>
+                    <strong>Type:</strong> {{selectedStay.type}} <br>
+                    <strong>Your Review:</strong> {{selectedStay.review}} <br>
+                    <a href="#!/stay/{{selectedStay.stayId}}">View Details</a>
+                </div> 
+            </info-window>
+    </ng-map>
+    <ng-map ng-show="value == 'Campsite'" zoom="4" center="[37.0902, -95.7129]" style="width:500px; height:300px">
+            <marker ng-repeat="stay in campsiteStaysArr" position="{{stay.address}}" id="{{stay.stayId}}" on-click="showDetail(stay)"></marker>
+            <info-window id="stayInfoWindow">
+                <div ng-non-bindable>
+                    <h6>{{selectedStay.name}}</h6>
+                    <strong>Address:</strong> {{selectedStay.address}} <br>
+                    <strong>Type:</strong> {{selectedStay.type}} <br>
+                    <strong>Your Review:</strong> {{selectedStay.review}} <br>
+                    <a href="#!/stay/{{selectedStay.stayId}}">View Details</a>
+                </div> 
+            </info-window>
+    </ng-map>
+    <ng-map ng-show="value == 'AirBnb'" zoom="4" center="[37.0902, -95.7129]" style="width:500px; height:300px">
+            <marker ng-repeat="stay in airbnbStaysArr" position="{{stay.address}}" id="{{stay.stayId}}" on-click="showDetail(stay)"></marker>
+            <info-window id="stayInfoWindow">
+                <div ng-non-bindable>
+                    <h6>{{selectedStay.name}}</h6>
+                    <strong>Address:</strong> {{selectedStay.address}} <br>
+                    <strong>Type:</strong> {{selectedStay.type}} <br>
+                    <strong>Your Review:</strong> {{selectedStay.review}} <br>
+                    <a href="#!/stay/{{selectedStay.stayId}}">View Details</a>
+                </div> 
+            </info-window>
+    </ng-map> -->
 </div>
