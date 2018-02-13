@@ -29,7 +29,7 @@
             <th></th>
             <th ng-click="sortData('name')">Name<div ng-class="getSortClass('name')"></div></th>
             <th ng-click="sortData('review')">Review<div ng-class="getSortClass('review')"></div></th>
-            <th ng-click="sortData('price')">Price<div ng-class="getSortClass('price')"></div></th>
+            <th ng-click="sortData('price')">Price / Night<div ng-class="getSortClass('price')"></div></th>
         </tr>
         <tr ng-repeat="stay in stays | filter: searchTerm.searchTerm | orderBy:sortColumn:reverseSort">
             <td width="10%" align="center">
