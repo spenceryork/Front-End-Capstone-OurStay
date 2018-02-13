@@ -1,7 +1,7 @@
 
-<nav class="align-items-end listNavHeader">
+<nav class="align-items-end listNavHeader navTabs">
     <h4>PAST STAYS</h4>
-    <div class="navTabs">
+    <!-- <div class="navTabs"> -->
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="#!/list"><strong style="color: #373737">List</strong></a>
@@ -10,43 +10,37 @@
                 <a class="nav-link" href="#!/map">Map</a>
             </li>
         </ul>
-    </div>
+    <!-- </div> -->
 </nav>
 <div class="listContainer">
     <div class="searchDiv">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ng-model="searchTerm.searchTerm">
     </div>
-    <!-- <div class="d-flex flex-column list">
-        <div class="d-flex flex-row justify-content-between stayCard" ng-repeat="stay in stays | filter: searchTerm.searchTerm">
-            <i ng-class="{'fas fa-tree fa-2x': stay.type == 'Campsite', 'fas fa-home fa-2x': stay.type == 'AirBnb', 'fas fa-building fa-2x': stay.type == 'Hotel'}"></i>
-            <a href="#!/stay/{{stay.stayId}}">{{stay.name}}</a>
-            <h6>{{stay.review}}</h6>
-            <a href="#" class="delete" ng-click="deleteStay(stay.stayId)"><i class="fas fa-minus-circle fa-2x delete" ng-click=""></i></a>
-        </div>
-    </div> -->
-    <table class="listTable" cellspacing="10">
-        <tr>
+    <table style="border-radius: 5px" class="listTable" cellspacing="10">
+        <tr class="tableRow tableRowHeader">
             <th></th>
             <th ng-click="sortData('name')">Name<div ng-class="getSortClass('name')"></div></th>
             <th ng-click="sortData('review')">Review<div ng-class="getSortClass('review')"></div></th>
             <th ng-click="sortData('price')">Price / Night<div ng-class="getSortClass('price')"></div></th>
+            <th></th>
         </tr>
-        <tr ng-repeat="stay in stays | filter: searchTerm.searchTerm | orderBy:sortColumn:reverseSort">
+        <tr class="tableRow tableRowData" ng-repeat="stay in stays | filter: searchTerm.searchTerm | orderBy:sortColumn:reverseSort">
             <td width="10%" align="center">
-                <i ng-class="{'fas fa-tree fa-2x': stay.type == 'Campsite', 'fas fa-home fa-2x': stay.type == 'AirBnb', 'fas fa-building fa-2x': stay.type == 'Hotel'}"></i>
+                <i ng-class="{'fas fa-tree fa-2x icon': stay.type == 'Campsite', 'fas fa-home fa-2x icon': stay.type == 'AirBnb', 'fas fa-building fa-2x icon': stay.type == 'Hotel'}"></i>
             </td>
             <td width="30%">
                 <a href="#!/stay/{{stay.stayId}}">{{stay.name}}</a>  
             </td>
             <td width="30%">
-                <h6>{{stay.review}}</h6>
+                <text>{{stay.review}}</text>
             </td>
             <td width="20%">
-                <h6>${{stay.price}}</h6>
+                <text>{{stay.price}}</text>
             </td>
             <td width="10%" align="center">
                 <a class="delete" ng-click="deleteStay(stay.stayId)"><i class="fas fa-minus-circle fa-2x delete"></i></a>
             </td>
-       </tr>
+        </tr>
+        <tr class="tableRowFooter"></tr>
     </table>
 </div>
