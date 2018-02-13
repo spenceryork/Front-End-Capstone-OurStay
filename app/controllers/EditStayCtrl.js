@@ -9,13 +9,11 @@ angular.module("OurStayApp").controller("EditStayCtrl", function($scope, FbFacto
         $scope.stay = stay;
     });
 
-    console.log("routParams.stayId:", $routeParams.stayId);
-    console.log();
-
     $scope.updateStay = function() {
+        let price = $scope.stay.price.replace(/[!@#$%^&*]/g, "");
+        $scope.stay.price = parseFloat(price).toFixed(2);
         FbFactory.updateStayDetails($routeParams.stayId, $scope.stay)
         .then( () => {
-            console.log("routeParams.stayId");
             $location.url(`/stay/${$routeParams.stayId}`);
         });
     };
