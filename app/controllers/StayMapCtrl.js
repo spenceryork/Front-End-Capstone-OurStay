@@ -24,14 +24,10 @@ angular.module("OurStayApp").controller("StayMapCtrl", function($scope, FbFactor
                 $scope.CorrectStays = stays;
             }
         };
-
-        // console.log("HotelStaysArr", $scope.hotelStaysArr);
         console.log("data received by stayMap controller", stays);
+        $scope.getCorrectStays();
     });
 
-    $scope.getHotels = function() {
-
-    };
 
 
 
