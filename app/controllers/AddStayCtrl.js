@@ -14,7 +14,8 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
         uid: "",
         url: ""
     };
-
+    
+    $scope.stay.address = "Nashville, TN, USA";
     
     $scope.placeChanged = function() {
         let place = this.getPlace();
