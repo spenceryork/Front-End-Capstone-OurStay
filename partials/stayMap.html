@@ -16,19 +16,19 @@
     <div class="viewController">
         <h5>MAP VIEW</h5>
         <div class="radios d-flex flex-column">
-            <div>
-                Select category:
+            <div class="selectCat">
+                Select Category:
             </div>
-            <div class="raio">
+            <div class="radio">
                 <input type="radio" ng-model="value" value="All" ng-init="getCorrectStays()" ng-change="getCorrectStays()" ng-checked="value==item"><span class="stayType">All</span>
             </div>
-            <div class="raio">
+            <div class="radio">
                 <input type="radio" ng-model="value" value="Hotel" ng-change="getCorrectStays()"><span class="stayType">Hotels</>
             </div>
-            <div class="raio">
+            <div class="radio">
                 <input type="radio" ng-model="value" value="AirBnb" ng-change="getCorrectStays()"><span class="stayType">AirBnbs</span>
             </div>
-            <div class="raio">
+            <div class="radio">
                 <input type="radio" ng-model="value" value="Campsite" ng-change="getCorrectStays()"><span class="stayType">Campsites</span>
             </div>
         </div>

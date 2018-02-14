@@ -21,7 +21,9 @@
             <th></th>
             <th ng-click="sortData('name')">Name<div ng-class="getSortClass('name')"></div></th>
             <th ng-click="sortData('review')">Review<div ng-class="getSortClass('review')"></div></th>
-            <th ng-click="sortData('price')">Price / Night<div ng-class="getSortClass('price')"></div></th>
+            <th>Price / Night<div></div></th>
+            <!-- <th ng-click="sortData('price')">Price / Night<div ng-class="getSortClass('price')"></div></th> -->
+
             <th></th>
         </tr>
         <tr class="tableRow tableRowData" ng-repeat="stay in stays | filter: searchTerm.searchTerm | orderBy:sortColumn:reverseSort">
@@ -35,7 +37,7 @@
                 <text>{{stay.review}}</text>
             </td>
             <td width="20%">
-                <text>{{stay.price}}</text>
+                <text>${{stay.price}}</text>
             </td>
             <td width="10%" align="center">
                 <a class="delete" ng-click="deleteStay(stay.stayId)"><i class="fas fa-minus-circle fa-2x delete"></i></a>

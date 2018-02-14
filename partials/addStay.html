@@ -6,6 +6,7 @@
     <div class="formMapContainer d-flex flex-row">
         <!-- </form> -->
         <div class="addStayForm align-self-center">
+            <p>Start by searching for a place you've previous stayed, or just simply type in a 'Name' and 'Address' and start tracking.</p>
             <form>
                 <div class="form-group">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search" places-auto-complete size=80
@@ -21,7 +22,7 @@
             </form>
         </div>
         <div class="addMap align-self-center">
-            <ng-map class="align-self-center" zoom="16" center="{{stay.address}}" style="width:500px; height:300px" ng-model="searchMap">
+            <ng-map class="align-self-center" zoom="16" center="{{stay.address}}" style="width:400px; height:250px" ng-model="searchMap">
                 <marker position="{{stay.address}}" title="{{stay.address}}" ng-show="searchMap"></marker>
             </ng-map>
         </div>

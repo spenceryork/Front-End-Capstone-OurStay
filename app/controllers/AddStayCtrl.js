@@ -19,8 +19,6 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
     
     $scope.placeChanged = function() {
         let place = this.getPlace();
-        console.log("stay details from api", place);
-
         
         $scope.stay.name = place.name;
         $scope.stay.address = place.formatted_address;
@@ -31,10 +29,9 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
     
     $scope.trackStay = function() {
         $scope.stay.uid = firebase.auth().currentUser.uid;
+
         let price = $scope.stay.price.replace(/[!@#$%^&*]/g, "");
-        // console.log("stay price", price);
         $scope.stay.price = parseFloat(price).toFixed(2);
-        console.log('Place Data', $scope.stay);
         FbFactory.addStay($scope.stay)
         .then( () => {
             $window.setTimeout (function() {
