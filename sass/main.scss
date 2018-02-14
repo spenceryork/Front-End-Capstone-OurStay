@@ -209,9 +209,6 @@ table {
     td {
         padding-top: 7px;
         padding-bottom: 7px;
-        // border-top: 10px solid;
-        // border-bottom: 10px solid;
-        // border-color: transparent;
     }
 }
 
@@ -252,19 +249,32 @@ th {
 // MAP PAGE
 
 .mapContainer {
-    margin-top: 25px;
-    margin-left: 25px;
     width: 90%;
+    margin: auto;
 }
 
 .viewController {
+    width: 25%;
     border: 1px solid black;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+    background-color:#f4f4f4;
+
     h5 {
-        margin-left: 25px;
-        margin-top: 25px;
+        // padding-left: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #373737;
+        border-top-left-radius: 25px;
+        color: white;
+        text-align: center;
+
     }
+}
+
+.searchDiv {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .radios {
