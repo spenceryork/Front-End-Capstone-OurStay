@@ -3,22 +3,31 @@
         <h2>Welcome to OurStay!</h2>
         <h6>Start tracking where you've been.</h6>
     </div>
+    <div class="addStayHeader">
+        <div class="addStayHeaderText">
+            <h5>WHERE TO START</h5>
+            <p>Search for a place you've previously stayed, or just simply type in a 'Name' and 'Address' and start tracking.</p>
+        </div>
+    </div>
+    <input class="form-control addSearch" type="search" placeholder="Search" aria-label="Search" places-auto-complete
+    component-restrictions="{country:'us'}"
+    types="{{types}}"
+    on-place-changed="placeChanged()">
     <div class="formMapContainer d-flex flex-row">
         <!-- </form> -->
         <div class="addStayForm align-self-center">
-            <p>Start by searching for a place you've previous stayed, or just simply type in a 'Name' and 'Address' and start tracking.</p>
             <form>
                 <div class="form-group">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" places-auto-complete size=80
-                    component-restrictions="{country:'us'}"
-                    types="{{types}}"
-                    on-place-changed="placeChanged()">
-                    <label for="exampleFormControlInput1">Name:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.name" ng-value="name">
-                    <label for="exampleFormControlInput1">Address:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.address" ng-value="address">
+                    <div class="searchInput">
+                        <label for="exampleFormControlInput1">Name:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.name" ng-value="name">
+                    </div>
+                    <div class="searchInput">
+                        <label for="exampleFormControlInput1">Address:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.address" ng-value="address">
+                    </div>
                 </div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStayModal">START TRACKING</button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addStayModal">START TRACKING</button>
             </form>
         </div>
         <div class="addMap align-self-center">
