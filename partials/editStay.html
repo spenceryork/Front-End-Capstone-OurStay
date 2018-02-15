@@ -1,34 +1,62 @@
-<div class="stayHeader">
-        <h4>{{title}}</h4>
-</div>
-<div>
-    <form>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Image Url:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.url" ng-value="url">
-            <label for="exampleFormControlInput1">Name:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.name" ng-value="name">
-            <label for="exampleFormControlInput1">Address:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.address" ng-value="address">
-            <label for="exampleFormControlInput1">Website:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.website" ng-value="website">
-            <label for="exampleFormControlInput1">Website:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.price" ng-value="price">
-            <label for="exampleFormControlSelect1">Type:</label>
-                <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.type">
-                    <option>Hotel</option>
-                    <option>AirBnb</option>
-                    <option>Campsite</option>
-                </select>
-            <label for="exampleFormControlSelect1">Your Review:</label>
-                <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.review">
-                    <option>Stay here again</option>
-                    <option>Okay, but not great</option>
-                    <option>Run away</option>
-                </select>
-            <label for="exampleFormControlInput1">Personal Note:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add a personal note about your stay..." ng-model="stay.note">
+<div class="editContainer">
+    <div class="formContainer">
+        <div class="formInternalContainer">
+            <div class="stayHeader">
+                    <h4>{{title}}</h4>
+            </div>
+            <div>
+                <form class="d-flex flex-row">
+                    <div class="leftForm">
+                        <div class="form-group">
+                            <div class="editOption">
+                                <label for="exampleFormControlInput1">IMAGE URL:</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.url" ng-value="url">
+                            </div>
+                            <div class="editOption">
+                                <label for="exampleFormControlInput1">NAME:</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.name" ng-value="name">
+                            </div>
+                            <div class="editOption">
+                                <label for="exampleFormControlInput1">ADDRESS:</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.address" ng-value="address">
+                            </div>
+                            <div class="editOption">
+                                <label for="exampleFormControlInput1">WEBSITE:</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.website" ng-value="website">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightForm">
+                        <div class="form-group">
+                            <div class="editOption">
+                                <label for="exampleFormControlInput1">PRICE:</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.price" ng-value="price">
+                            </div>
+                            <div class="editOption">
+                                <label for="exampleFormControlSelect1">TYPES:</label>
+                                <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.type">
+                                    <option>Hotel</option>
+                                    <option>AirBnb</option>
+                                    <option>Campsite</option>
+                                </select>
+                            </div>
+                            <div class="editOption">
+                                <label for="exampleFormControlSelect1">YOUR REVIEW:</label>
+                                <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.review">
+                                    <option>Stay here again</option>
+                                    <option>Okay, but not great</option>
+                                    <option>Run away</option>
+                                </select>
+                            </div>
+                            <div class="editOption">
+                                <label for="exampleFormControlInput1">PERSONAL NOTE:</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add a personal note about your stay..." ng-model="stay.note">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-secondary" ng-click="updateStay()">UPDATE</button>
+            </div>
         </div>
-        <button type="button" class="btn btn-secondary" ng-click="updateStay()">UPDATE</button>
-    </form>
-<div>
+    </div>
+</div>
