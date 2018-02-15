@@ -1,6 +1,7 @@
 body {
     background-color: white;
     height: 100%;
+    font-family: 'Sanchez', serif;
 }
 
 // NAV
@@ -32,6 +33,7 @@ body {
     margin: auto;
     h1 {
         color: white;
+        font-family: 'Playfair Display SC', serif;
     }
 }
 
@@ -49,6 +51,8 @@ body {
     h5 {
         text-align: center;
         color: black;
+        font-family: 'Playfair Display SC', serif;
+
         // border-bottom: 1px solid black;
     }
 }
@@ -80,6 +84,8 @@ body {
     }
     h6 {
         padding-top: 25px;
+        font-family: 'Playfair Display SC', serif;
+
     }
 }
 
@@ -165,6 +171,8 @@ table {
         margin-bottom: 0;
         color: #c0b283;
         text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
     }
 }
 
@@ -227,6 +235,7 @@ table {
 
 th {
     padding: 5px;
+    font-family: 'Playfair Display SC', serif;
     cursor: pointer;
     .price {
         cursor: pointer;
@@ -284,6 +293,8 @@ th {
         border-top-left-radius: 25px;
         color: white;
         text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
 
     }
 }
@@ -345,6 +356,7 @@ th {
 .modal-body {
     label {
         margin: 10px;
+
     }
 }
 
@@ -386,6 +398,8 @@ th {
     margin-left: 25px;
     h5 {
         padding-top: 20px;
+        font-family: 'Playfair Display SC', serif;
+
     }
     p {
         padding-bottom: 15px;
@@ -475,6 +489,8 @@ footer {
         margin-top: 20px;
         margin-bottom: 10px;
         text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
     }
 }
 
@@ -492,6 +508,8 @@ footer {
         padding-left: 0px;
         margin-bottom: 0;
         font-weight: bold;
+        font-family: 'Playfair Display SC', serif;
+
     }
     span {
         padding-left: 10px;
@@ -542,6 +560,8 @@ footer {
     h6 {
         font-weight: bold;
         text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
         // padding: 10px;
     }
 
