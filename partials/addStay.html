@@ -1,40 +1,43 @@
 <div class="mainContainer">
-    <div class="headerContainer">
+    <!-- <div class="headerContainer">
         <h2>Welcome to OurStay!</h2>
         <h6>Start tracking where you've been.</h6>
-    </div>
-    <div class="addStayHeader">
-        <div class="addStayHeaderText">
-            <h5>WHERE TO START</h5>
-            <p>Search for a place you've previously stayed, or just simply type in a 'Name' and 'Address' and start tracking.</p>
+    </div> -->
+    <div class="addMainBody">
+        <div class="addStayHeader">
+            <div class="addStayHeaderText">
+                <h5>WHERE TO START</h5>
+                <p>Search for a place you've previously stayed, or just simply type in a 'Name' and 'Address' and start tracking.</p>
+            </div>
         </div>
-    </div>
-    <input class="form-control addSearch" type="search" placeholder="Search" aria-label="Search" places-auto-complete
-    component-restrictions="{country:'us'}"
-    types="{{types}}"
-    on-place-changed="placeChanged()">
-    <div class="formMapContainer d-flex flex-row">
-        <!-- </form> -->
-        <div class="addStayForm align-self-center">
-            <form>
-                <div class="form-group">
-                    <div class="searchInput">
-                        <label for="exampleFormControlInput1">Name:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.name" ng-value="name">
+        <input class="form-control addSearch" type="search" placeholder="Search" aria-label="Search" places-auto-complete
+        component-restrictions="{country:'us'}"
+        types="{{types}}"
+        on-place-changed="placeChanged()">
+        <div class="formMapContainer d-flex flex-row">
+            <!-- </form> -->
+            <div class="addStayForm align-self-center">
+                <form>
+                    <div class="form-group">
+                        <div class="searchInput">
+                            <label for="exampleFormControlInput1">Name:</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.name" ng-value="name">
+                        </div>
+                        <div class="searchInput">
+                            <label for="exampleFormControlInput1">Address:</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.address" ng-value="address">
+                        </div>
                     </div>
-                    <div class="searchInput">
-                        <label for="exampleFormControlInput1">Address:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.address" ng-value="address">
-                    </div>
-                </div>
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addStayModal">START TRACKING</button>
-            </form>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addStayModal">START TRACKING</button>
+                </form>
+            </div>
+            <div class="addMap align-self-center">
+                <ng-map class="align-self-center" zoom="16" center="{{stay.address}}" style="width:400px; height:250px" ng-model="searchMap">
+                    <marker position="{{stay.address}}" title="{{stay.address}}" ng-show="searchMap"></marker>
+                </ng-map>
+            </div>
         </div>
-        <div class="addMap align-self-center">
-            <ng-map class="align-self-center" zoom="16" center="{{stay.address}}" style="width:400px; height:250px" ng-model="searchMap">
-                <marker position="{{stay.address}}" title="{{stay.address}}" ng-show="searchMap"></marker>
-            </ng-map>
-        </div>
+
     </div>
     <!-- Modal -->
     <div class="modal fade" id="addStayModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -47,30 +50,42 @@
                 </button>
             </div>
             <div class="modal-body">
-                <label for="exampleFormControlInput1">Image Url:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.url" ng-value="url">
-                <label for="exampleFormControlInput1">Website:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.website" ng-value="website">
-                <label for="exampleFormControlInput1">Price ($/night):</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.price" ng-value="price">   
-                <label for="exampleFormControlSelect1">Type:</label>
-                        <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.type">
-                            <option>Hotel</option>
-                            <option>AirBnb</option>
-                            <option>Campsite</option>
-                        </select>
+                <div class="modalOption">
+                    <label for="exampleFormControlInput1">Image Url:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.url" ng-value="url">
+                </div>
+                <div class="modalOption">
+                    <label for="exampleFormControlInput1">Website:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.website" ng-value="website">
+                </div>
+                <div class="modalOption">
+                    <label for="exampleFormControlInput1">Price ($/night):</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.price" ng-value="price">   
+                </div>
+                <div class="modalOption">
+                    <label for="exampleFormControlSelect1">Type:</label>
+                            <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.type">
+                                <option>Hotel</option>
+                                <option>AirBnb</option>
+                                <option>Campsite</option>
+                            </select>
+                </div>
+                <div class="modalOption">
                     <label for="exampleFormControlSelect1">Your Review:</label>
                         <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.review">
                             <option>Stay here again</option>
                             <option>Okay, but not great</option>
                             <option>Run away</option>
                         </select>
+                </div>
+                <div class="modalOption">
                     <label for="exampleFormControlInput1">Personal Note:</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add a personal note about your stay..." ng-model="stay.note">
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="trackStay()">TRACK</button>
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="trackStay()">TRACK</button>
             </div>
             </div>
         </div>

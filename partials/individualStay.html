@@ -1,32 +1,43 @@
-<div class="individualStayContainer">
-    <!-- <div>
-        <img ng-src="{{stay.url || stay.type == 'Hotel' && '../images/soren-astrup-jorgensen-241830.jpg, stay.type == 'Campsite' && '../images/adore-chang-178629.jpg', stay.type == 'AirBnb' && '../images/loft-apartment-near-downtown-and-wsu.jpg'}}"/>
-    </div> -->
-        <div class="individualCard">
-                <h3>{{stay.name}}</h3>
-            <div class="individualImage">
-                <span ng-show></span>
-                <img class="stayImage" ng-src="{{stay.url || '../images/stock-photo.png'}}"/>
+<div class="individualStayPage">
+    <div class="individualStayContainer">
+            <div class="individualCard">
+                    <h3>{{stay.name}}</h3>
+                <div class="individualImage">
+                    <div ng-show></div>
+                    <img class="stayImage" ng-src="{{stay.url || '../images/stock-photo.png'}}"/>
+                </div>
+                <div class="stayDetails">
+                    <div class="individualDetail">
+                        <h6>ADDRESS:</h6>
+                        <div>{{stay.address}}</div>
+                    </div>
+                    <div class="individualDetail">
+                        <h6>TYPE:</h6>
+                        <div>{{stay.type}}</div>
+                    </div>
+                    <div class="individualDetail">
+                        <h6>PRICE:</h6>
+                        <div>${{stay.price}} / Night</div>
+                    </div>
+                    <div class="individualDetail">
+                        <h6>YOUR REVIEW:</h6>
+                        <div>{{stay.review}}</div><br>
+                    </div>
+                    <div class="individualDetail">
+                        <h6>NOTES:</h6>
+                        <div>{{stay.note}}</div><br>
+                    </div>
+                    <div class="viewSite">
+                        <a href="#!/stay/{{stay.stayId}}" ng-click="redirectToSite(stay.website, '_blank')" class="viewSite" ng-hide="!stay.website">View Site</a>
+                    </div>
+                    <button type="button" class="btn btn-secondary"><a ng-href="#!/edit/{{stay.stayId}}">EDIT</a></button>
+                </div>
             </div>
-            <div class="stayDetails">
-                <h6>ADDRESS:</h6>
-                <span>{{stay.address}}</span>
-                <h6>TYPE:</h6>
-                <span>{{stay.type}}</span>
-                <h6>PRICE:</h6>
-                <span>${{stay.price}} / Night</span>
-                <h6>YOUR REVIEW:</h6>
-                <span>{{stay.review}}</span><br>
-                <h6>NOTES:</h6>
-                <span>{{stay.note}}</span><br>
-                <!-- <a href="{{stay.website}}" ng-hide="!stay.website">View Site</a> -->
-                <a href="#!/stay/{{stay.stayId}}" ng-click="redirectToSite(stay.website, '_blank')" class="viewSite" ng-hide="!stay.website">View Site</a>
+            <div class="individualMapContainer">
+                <h6>LOCATION:</h6>
+                <ng-map  class="individualMap" zoom="16" center="{{stay.address}}">
+                        <marker position="{{stay.address}}" id={{stay.stayId}}></marker>
+                </ng-map>
             </div>
-            <button type="button" class="btn btn-secondary"><a ng-href="#!/edit/{{stay.stayId}}">EDIT</a></button>
-        </div>
-        <div class="individualMapContainer">
-            <ng-map  class="individualMap" zoom="16" center="{{stay.address}}">
-                    <marker position="{{stay.address}}" id={{stay.stayId}}></marker>
-            </ng-map>
-        </div>
+    </div>      
 </div>

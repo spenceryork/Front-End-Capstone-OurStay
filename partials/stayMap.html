@@ -1,16 +1,26 @@
 <nav class="align-items-end listNavHeader navTabs">
-    <h4>Past Stays</h4>
-    <ul class="nav nav-tabs">
+    <!-- <h4>Past Stays</h4> -->
+    <!-- <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link" href="#!/list">List</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="#!/map"><strong>Map</strong></a>
         </li>
-    </ul>
+    </ul> -->
 </nav>
+<div class="secondaryListNav align-self-start">
+    <ul class="nav nav flex-row">
+        <li class="nav-item">
+            <a class="nav-link" href="#!/list">List</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#!/map"><strong style="color: #373737">Map</strong></a>
+        </li>
+    </ul>
+</div>
 <div class="searchDiv">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" ng-model="searchTerm.searchTerm">
+        <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search" ng-model="searchTerm.searchTerm">
 </div>
 <div class="mapContainer d-flex flex-row">
     <div class="viewController">

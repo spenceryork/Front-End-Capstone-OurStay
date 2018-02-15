@@ -96,29 +96,6 @@ body {
     padding-left: 75px;
 }
 
-// ADD STAY
-
-.headerContainer {
-    background-image: url("../images/sanFran.jpg");
-    // background-size: 900px;
-    height: 250px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    color: white;
-    box-shadow: 0 5px 5px -5px #333;
-    // border-bottom: solid 10px rgba(218, 226, 98, 0.10);
-}
-
-.formMapContainer {
-    background-color: #f4f4f4;
-    // background-image: url("../images/nashville.jpg");
-    // background-size: 900px;
-}
 
 
 
@@ -137,7 +114,6 @@ body {
         box-shadow: 12px 0 15px -4px rgba(99, 98, 97, 0.4), -12px 0 15px -4px rgba(99, 98, 97, 0.4);
     }
     .tableRow {
-        // border: solid black 1px;
         background-color:#f4f4f4;
         height: 80px;
         box-shadow: inset 0px 1px 3px #7c7b7b;
@@ -146,17 +122,20 @@ body {
         background-color: #373737;
         color: white;
         box-shadow: inset 0px 1px 3px white;
-        // border-top-left-radius: 25px;
+        height: 73px;
+
+        border-top-left-radius: 25px;
     }
+
     .tableRowFooter {
         background-color: #373737;
-        // box-shadow: inset 0px 1px 3px white;
         height: 15px;
+        border-bottom-left-radius: 25px;
     }
+
     a {
         text-decoration: none;
         color: #373737;
-        // font-weight: bold;
     }
     .icon {
         opacity: 0.75;
@@ -171,16 +150,19 @@ body {
 
 table {
     box-shadow: inset 0px 1px 3px #7c7b7b;
+    border-top-left-radius: 25px;
+
+}
+
+.roundedTable {
+    border-top-left-radius: 25px;
 }
 
 .listNavHeader {
-    background-image: url("../images/nashville.jpg");
-    background-size: 900px;
-    // height: 250px;
-    position: relative;
+    background-image: url("../images/nashville-skyline.png");
+    height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
-    // background-color: #dcd0c0;
     h4 {
         margin-bottom: 0;
         color: #c0b283;
@@ -188,14 +170,23 @@ table {
     }
 }
 
-.navTabs {
-    height: 250px;
-    width: 100%;
-    background-color: #dcd0c0;
+.secondaryListNav {
+    width: 90%;
     margin: auto;
+    border-bottom: 1.5px solid #f4f4f4;
+    margin-top: 25px;
     a {
-        color: white;
+        padding-top: 0px;
+        color: #c0b283;
     }
+    .active {
+        border-bottom: 2px solid #dcd0c0;
+    }
+}
+
+.nav-tabs {
+    width: 90%;
+    margin: auto;  
 }
 
 .nav-tabs {
@@ -231,6 +222,9 @@ table {
 th {
     padding: 5px;
     cursor: pointer;
+    .price {
+        cursor: pointer;
+    }
 }
 
 .arrow-up {
@@ -251,12 +245,16 @@ th {
     display: inline-block;
 }
 
-// MAP PAGE
+//////// MAP PAGE //////////////
 
 .mapContainer {
     width: 90%;
     margin: auto;
     margin-bottom: 25px;
+}
+
+.search {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .viewController {
@@ -302,25 +300,77 @@ th {
     font-size: 1.25em;
 }
 
-// ADD STAY
+/////////// ADD STAY ///////////////
+
+// .headerContainer {
+//     background-image: url("../images/sanFran.jpg");
+//     // background-size: 900px;
+//     height: 250px;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     margin: auto;
+//     color: white;
+//     box-shadow: 0 5px 5px -5px #333;
+//     // border-bottom: solid 10px rgba(218, 226, 98, 0.10);
+// }
+
+.formMapContainer {
+    background-color: #f4f4f4;
+}
+
+.modal-header {
+    background-color: #f4f4f4;
+}
+
+.modal-footer {
+    background-color: #f4f4f4;
+}
+
+.modal-body {
+    label {
+        margin: 10px;
+    }
+}
 
 .addStayHeader {
-    background-color: #f4f4f4;
+    background-color: rgba(245, 241, 241, 0.75);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    // transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+
+}
+
+.addMainBody {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: auto;
+    // margin-top: 25px;
+    // background-color: #dcd0c0;
+    background-image: url("../images/san-fran-large.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .addSearch {
     width: 90%;
     margin: auto;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-
+    
     input {
         margin-top: 25px;
     }
 }
 
 .addStayHeaderText {
+    width: 90%;
     margin-left: 25px;
     h5 {
         padding-top: 20px;
@@ -331,16 +381,20 @@ th {
     }
 }
 
-
 .addStayForm {
     width: 40%;
-    padding-left: 25px;
-    // border-right: 2px solid #373737;
+    // padding-left: 25px;
     padding-right: 50px;
     height: 250px;
     box-shadow: 4px 0 5px -5px #333;
+    label {
+        color: black;
+    }
+    input {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
     button {
-        // margin-top: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     }
 }
 
@@ -356,25 +410,18 @@ th {
 
 .formMapContainer {
     width: 90%;
+    background-color: rgba(245, 241, 241, 0.75);
+    color: #f4f4f4;
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
     padding-top: 25px;
     padding-bottom: 25px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 5px;
     ng-map {
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
-    // border-right: 2px solid #c0b283;
-    // border-left: 2px solid #c0b283;
-
-}
-
-.addStayHeader {
-    width: 90%;
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
 }
 
 
@@ -382,42 +429,90 @@ footer {
     text-align: center;
 }
 
-// INDIVIDUAL PAGE
+//////////// INDIVIDUAL PAGE ///////////////
 
 .individualImage {
     img {
         height: 200px;
-        width: 350px;
+        width: 80%;
+        display: block;
+        margin: auto;
     }
+}
+
+.individualStayPage {
+    background-image: url("../images/miami.jpg");
+    // background-color: blue;
+    padding-top: 50px;
+    background-size: cover;
+
 }
 
 .individualStayContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    // margin-left: 25px;
-    width: 100%;
-    // background-color: #dcd0c0;
-    background-image: url("../images/individual.png");
-    background-size: 900px;
+    width: 90%;
+    margin: auto;
+    // padding-top: 25px;
+    // margin-top: 25px;
+    // background-size: 900px;
+    background-color: rgba(245, 241, 241, 0.75);
     h3 {
         margin-top: 20px;
-        margin-left: 57px;
         margin-bottom: 10px;
-        text-align: left;
+        text-align: center;
     }
 }
 
 .individualCard {
     align-self: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
     width: 500px;
-    text-align: center;
+    text-align: left;
     background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     h6 {
         padding: 10px;
+        padding-left: 0px;
         margin-bottom: 0;
         font-weight: bold;
     }
+    span {
+        padding-left: 10px;
+        white-space: pre-wrap;
+    }
+    .viewSite {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+    a {
+        color: #373737;
+        text-decoration: none;
+    }
+    button {
+        display: block;
+        margin: auto;
+        width: 100px;
+        // margin-left: 40px;
+        margin-bottom: 25px;
+        a {
+            color: white;
+        }
+    }
+}
+
+.individualDetail {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #f4f4f4;
 }
 
 .viewSite {
@@ -428,16 +523,66 @@ footer {
 }
 
 .individualMapContainer {
+    align-self: flex-start;
+    width: 60%;   
+    margin-top: 35px;
+    h6 {
+        font-weight: bold;
+        text-align: center;
+        // padding: 10px;
+    }
 
-    width: 60%;
-    // background-color: #dcd0c0;
-    
+    ng-map {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
 }
 .individualMap {
     margin: 0 auto;
     width: 500px; 
     height: 325px;
 }
+
+
+
+//////////// EDIT PAGE ///////////////
+
+.formContainer {
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    background-color: #f4f4f4;
+    button {
+        margin-left: 25px;
+    }
+}
+
+.formInternalContainer {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+}
+
+form {
+    width: 90%;
+    margin: 25px;
+    margin-bottom: 0px;
+}
+
+.leftForm {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.rightForm {
+    width: 40%;
+}
+
+.editOption {
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+
+
 
 
 
