@@ -9,6 +9,30 @@ angular.module("OurStayApp").controller("IndividualStayCtrl", function($scope, F
         $scope.stay = stay;
     });
 
+    $scope.title = "Edit Past Stay";
+
+    FbFactory.getStayDetails($routeParams.stayId)
+    .then( (stay) => {
+        $scope.stay = stay;
+    });
+
+    $scope.updateStay = function() {
+        let price = $scope.stay.price.replace(/[!@#$%^&*]/g, "");
+        $scope.stay.price = parseFloat(price).toFixed(2);
+        FbFactory.updateStayDetails($routeParams.stayId, $scope.stay)
+        .then( () => {
+            $location.url(`/stay/${$routeParams.stayId}`);
+        });
+    };
+
+    $scope.reloadStay = function() {
+        $window.setTimeout (function() {
+            $route.reload(`/stay/${$routeParams.stayId}`);
+            // $window.location.href = '#!/list';
+        },500);
+        console.log("reloadStay did run");
+    };
+
     $scope.redirectToSite = function(stayWebsite) {
         console.log("what is staywebsite", stayWebsite);
         $window.open(stayWebsite, "_blank");
