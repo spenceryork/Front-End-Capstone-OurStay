@@ -9,50 +9,54 @@
         </li>
     </ul> -->
 </nav>
-<div class="secondaryListNav align-self-start">
-    <ul class="nav nav flex-row">
-        <li class="nav-item">
-            <a class="nav-link" href="#!/list">List</strong></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="#!/map"><strong style="color: #373737">Map</strong></a>
-        </li>
-    </ul>
+<div class="navBackground">
+    <div class="secondaryListNav align-self-start">
+        <ul class="nav nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="#!/list">List</strong></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#!/map"><strong style="color: #373737">Map</strong></a>
+            </li>
+        </ul>
+    </div>
 </div>
-<div class="searchDiv">
-        <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search" ng-model="searchTerm.searchTerm">
-</div>
-<div class="mapContainer d-flex flex-row">
-    <div class="viewController">
-        <h5>MAP VIEW</h5>
-        <div class="radios d-flex flex-column">
-            <div class="selectCat">
-                Select Category:
-            </div>
-            <div class="radio">
-                <input type="radio" ng-model="value" value="All" ng-init="getCorrectStays()" ng-change="getCorrectStays()" ng-checked="value==item"><span class="stayType">All</span>
-            </div>
-            <div class="radio">
-                <input type="radio" ng-model="value" value="Hotel" ng-change="getCorrectStays()"><span class="stayType">Hotels</>
-            </div>
-            <div class="radio">
-                <input type="radio" ng-model="value" value="AirBnb" ng-change="getCorrectStays()"><span class="stayType">AirBnbs</span>
-            </div>
-            <div class="radio">
-                <input type="radio" ng-model="value" value="Campsite" ng-change="getCorrectStays()"><span class="stayType">Campsites</span>
+<div class="mapAndSearchContainer">
+    <div class="searchDiv">
+            <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search" ng-model="searchTerm.searchTerm">
+    </div>
+    <div class="mapContainer d-flex flex-row">
+        <div class="viewController">
+            <h5>MAP VIEW</h5>
+            <div class="radios d-flex flex-column">
+                <div class="selectCat">
+                    Select Category:
+                </div>
+                <div class="radio">
+                    <input type="radio" ng-model="value" value="All" ng-init="getCorrectStays()" ng-change="getCorrectStays()" ng-checked="value==item"><span class="stayType">All</span>
+                </div>
+                <div class="radio">
+                    <input type="radio" ng-model="value" value="Hotel" ng-change="getCorrectStays()"><span class="stayType">Hotels</>
+                </div>
+                <div class="radio">
+                    <input type="radio" ng-model="value" value="AirBnb" ng-change="getCorrectStays()"><span class="stayType">AirBnbs</span>
+                </div>
+                <div class="radio">
+                    <input type="radio" ng-model="value" value="Campsite" ng-change="getCorrectStays()"><span class="stayType">Campsites</span>
+                </div>
             </div>
         </div>
+        <ng-map zoom="4" center="[37.0902, -95.7129]" style="width:800px; height:400px">
+                <marker ng-repeat="stay in CorrectStays | filter: searchTerm.searchTerm" position="{{[stay.latitude, stay.longitude]}}" id="{{stay.stayId}}" on-click="showDetail(stay)"></marker>
+                <info-window id="stayInfoWindow">
+                    <div ng-non-bindable>
+                        <h6>{{selectedStay.name}}</h6>
+                        <strong>Address:</strong> {{selectedStay.address}} <br>
+                        <strong>Type:</strong> {{selectedStay.type}} <br>
+                        <strong>Your Review:</strong> {{selectedStay.review}} <br>
+                        <a href="#!/stay/{{selectedStay.stayId}}">View Details</a>
+                    </div> 
+                </info-window>
+        </ng-map>
     </div>
-    <ng-map zoom="4" center="[37.0902, -95.7129]" style="width:800px; height:400px">
-            <marker ng-repeat="stay in CorrectStays | filter: searchTerm.searchTerm" position="{{[stay.latitude, stay.longitude]}}" id="{{stay.stayId}}" on-click="showDetail(stay)"></marker>
-            <info-window id="stayInfoWindow">
-                <div ng-non-bindable>
-                    <h6>{{selectedStay.name}}</h6>
-                    <strong>Address:</strong> {{selectedStay.address}} <br>
-                    <strong>Type:</strong> {{selectedStay.type}} <br>
-                    <strong>Your Review:</strong> {{selectedStay.review}} <br>
-                    <a href="#!/stay/{{selectedStay.stayId}}">View Details</a>
-                </div> 
-            </info-window>
-    </ng-map>
 </div>

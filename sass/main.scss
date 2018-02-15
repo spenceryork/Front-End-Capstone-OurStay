@@ -102,19 +102,19 @@ body {
 // LIST PAGE
 
 .listContainer {
-    background-color: white;
-    margin-top: 25px;;
+    background-color: #f4f4f4;
+    margin-top: 0px;
     .listTable {
         width: 90%;
         margin: auto;
-        margin-top: 25px;
-        margin-bottom: 25px;
+        // margin-top: 25px;
+        padding-bottom: 25px;
     }
     .tableRowData:hover {
         box-shadow: 12px 0 15px -4px rgba(99, 98, 97, 0.4), -12px 0 15px -4px rgba(99, 98, 97, 0.4);
     }
     .tableRow {
-        background-color:#f4f4f4;
+        background-color: white;
         height: 80px;
         box-shadow: inset 0px 1px 3px #7c7b7b;
     }
@@ -143,10 +143,7 @@ body {
     }
 }
 
-.searchDiv {
-    width: 90%;
-    margin: auto;
-}
+
 
 table {
     box-shadow: inset 0px 1px 3px #7c7b7b;
@@ -160,6 +157,7 @@ table {
 
 .listNavHeader {
     background-image: url("../images/nashville-skyline.png");
+    background-color: #f4f4f4;
     height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -170,11 +168,16 @@ table {
     }
 }
 
+.navBackground {
+    background-color: #f4f4f4; 
+}
+
 .secondaryListNav {
+    background-color: #f4f4f4;
     width: 90%;
     margin: auto;
-    border-bottom: 1.5px solid #f4f4f4;
-    margin-top: 25px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    padding-top: 25px;
     a {
         padding-top: 0px;
         color: #c0b283;
@@ -187,10 +190,13 @@ table {
 .nav-tabs {
     width: 90%;
     margin: auto;  
+    background-color: #f4f4f4;
+
 }
 
 .nav-tabs {
     position: absolute;
+    background-color: #f4f4f4;
     bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -247,6 +253,9 @@ th {
 
 //////// MAP PAGE //////////////
 
+.mapAndSearchContainer {
+    background-color: #f4f4f4;
+}
 .mapContainer {
     width: 90%;
     margin: auto;
@@ -262,7 +271,7 @@ th {
     // border: 1px solid black;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    background-color:#f4f4f4;
+    background-color: white;
     box-shadow: inset 0px 1px 3px #7c7b7b;
     
     
@@ -280,8 +289,11 @@ th {
 }
 
 .searchDiv {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 90%;
+    margin: auto;
+    background-color: #f4f4f4;
 }
 
 .radios {
@@ -427,6 +439,7 @@ th {
 
 footer {
     text-align: center;
+    // padding-top: 25px;
 }
 
 //////////// INDIVIDUAL PAGE ///////////////
