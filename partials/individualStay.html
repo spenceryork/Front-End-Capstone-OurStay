@@ -28,7 +28,9 @@
                         <div>{{stay.note}}</div><br>
                     </div>
                     <div class="viewSite">
-                        <a href="#!/stay/{{stay.stayId}}" ng-click="redirectToSite(stay.website, '_blank')" class="viewSite" ng-hide="!stay.website">View Site</a>
+                        <a ng-click="redirectToSite(stay.website, '_blank')" class="viewSite" ng-hide="!stay.website">View Site</a>
+                        <!-- <a href="#!/stay/{{stay.stayId}}" ng-hide="!stay.website">View Site</a> -->
+
                     </div>
                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editStayModal">EDIT</a></button>
                     <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editStayModal"> <a ng-href="#!/edit/{{stay.stayId}}">EDIT</a></button> -->
