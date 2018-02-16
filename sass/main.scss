@@ -6,14 +6,17 @@ body {
 
 // NAV
 
-
-
 .navbar {
     background-color: #f4f4f4;
     box-shadow: 0 5px 5px -5px #333;
 
     a {
         color: #373737;
+    }
+    strong {
+        font-family: 'Marck Script', cursive;
+        font-size: 1.25em;
+        color:#c0b283
     }
 }
 
@@ -25,7 +28,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url("../images/SANFRAN.png");
+    position: relative;
+    background-image: url("../images/boston.jpg");
     background-size: cover;
 	background-repeat: no-repeat;
     height: 400px;
@@ -35,6 +39,15 @@ body {
         color: white;
         font-family: 'Playfair Display SC', serif;
     }
+    strong {
+        color:#c0b283
+    }
+}
+
+.headerText {
+    position: absolute;
+    left: 75px;
+    top: 40px;
 }
 
 .cardContainer {
@@ -52,7 +65,7 @@ body {
         text-align: center;
         color: black;
         font-family: 'Playfair Display SC', serif;
-
+        text-decoration: underline    
         // border-bottom: 1px solid black;
     }
 }
@@ -149,8 +162,6 @@ body {
     }
 }
 
-
-
 table {
     box-shadow: inset 0px 1px 3px #7c7b7b;
     border-top-left-radius: 25px;
@@ -167,6 +178,7 @@ table {
     height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 0 4px 2px -2px gray;
     h4 {
         margin-bottom: 0;
         color: #c0b283;
@@ -258,6 +270,10 @@ th {
     border-right: 5px solid transparent;
     border-top: 10px solid white;
     display: inline-block;
+}
+
+.arrow {
+    padding-left: 5px;
 }
 
 //////// MAP PAGE //////////////
@@ -363,9 +379,9 @@ th {
 .addStayHeader {
     background-color: rgba(245, 241, 241, 0.75);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    width: 90%;
-    margin: auto;
-    margin-top: 50px;
+    width: 50%;
+    // margin-left: 55px;
+    margin-top: 75px;
     margin-bottom: 25px;
     border-radius: 5px;
 
@@ -376,11 +392,31 @@ th {
     padding-bottom: 10px;
     width: 100%;
     margin: auto;
-    // margin-top: 25px;
-    // background-color: #dcd0c0;
+    // position: relative;
     background-image: url("../images/san-fran-large.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    h1 {
+        color: white;
+        font-family: 'Playfair Display SC', serif;
+    }
+    strong {
+        color:#c0b283
+    }
+}
+
+.addHeaderContainer {
+    width: 90%;
+    margin: auto;
+}
+
+.addHeader {
+    margin-top: 125px;
+    margin-left: 115px;
+    display: inline-block;
+    // position: absolute;
+    // right: 250px;
+    // top: 125px;
 }
 
 .addSearch {
@@ -396,6 +432,7 @@ th {
 .addStayHeaderText {
     width: 90%;
     margin-left: 25px;
+    // display: inline;
     h5 {
         padding-top: 20px;
         font-family: 'Playfair Display SC', serif;
@@ -486,11 +523,11 @@ footer {
     // background-size: 900px;
     background-color: rgba(245, 241, 241, 0.75);
     h3 {
+        font-weight: bold;
         margin-top: 20px;
         margin-bottom: 10px;
         text-align: center;
         font-family: 'Playfair Display SC', serif;
-
     }
 }
 
@@ -526,6 +563,7 @@ footer {
     a {
         color: #373737;
         text-decoration: none;
+        cursor: pointer;
     }
     button {
         display: block;
