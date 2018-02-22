@@ -4,10 +4,15 @@
         <h6>Start tracking where you've been.</h6>
     </div> -->
     <div class="addMainBody">
-        <div class="addStayHeader">
-            <div class="addStayHeaderText">
-                <h5>WHERE TO START</h5>
-                <p>Search for a place you've previously stayed, or just simply type in a 'Name' and 'Address' and start tracking.</p>
+        <div class="d-flex flex-row addHeaderContainer">
+            <div class="addStayHeader">
+                <div class="addStayHeaderText">
+                    <h5>WHERE TO START</h5>
+                    <p>Search for a place you've previously stayed, or just simply type in a 'Name' and 'Address' and start tracking.</p>
+                </div>
+            </div>
+            <div class="addHeader">
+                <h1><i>NEW</i> <strong> STAY</strong></h1>
             </div>
         </div>
         <input class="form-control addSearch" type="search" placeholder="Search" aria-label="Search" places-auto-complete
@@ -32,7 +37,7 @@
                 </form>
             </div>
             <div class="addMap align-self-center">
-                <ng-map class="align-self-center" zoom="16" center="{{stay.address}}" style="width:400px; height:250px" ng-model="searchMap">
+                <ng-map class="align-self-center" zoom="16" center="{{stay.address}}" style="width:500px; height:250px" ng-model="searchMap">
                     <marker position="{{stay.address}}" title="{{stay.address}}" ng-show="searchMap"></marker>
                 </ng-map>
             </div>

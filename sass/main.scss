@@ -1,11 +1,10 @@
 body {
     background-color: white;
     height: 100%;
+    font-family: 'Sanchez', serif;
 }
 
 // NAV
-
-
 
 .navbar {
     background-color: #f4f4f4;
@@ -14,17 +13,27 @@ body {
     a {
         color: #373737;
     }
+    strong {
+        font-family: 'Marck Script', cursive;
+        font-size: 1.25em;
+        color:#c0b283
+    }
 }
 
 
 // LADNING PAGE
+
+.landingContainer {
+    width: 100%;
+}
 
 .headingContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url("../images/SANFRAN.png");
+    position: relative;
+    background-image: url("../images/boston.jpg");
     background-size: cover;
 	background-repeat: no-repeat;
     height: 400px;
@@ -32,13 +41,25 @@ body {
     margin: auto;
     h1 {
         color: white;
+        font-family: 'Playfair Display SC', serif;
+    }
+    strong {
+        color:#c0b283
     }
 }
 
+.headerText {
+    position: absolute;
+    left: 75px;
+    top: 40px;
+}
+
 .cardContainer {
+    width: 100%;
+    margin: auto;
     margin-top: 25px;
-    margin-left: 15px;
-    margin-right: 15px;
+    // margin-left: 15px;
+    // margin-right: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -46,9 +67,12 @@ body {
 
 .landingCard {
     margin-left: 10px;
+    width: 33%;
     h5 {
         text-align: center;
         color: black;
+        font-family: 'Playfair Display SC', serif;
+        text-decoration: underline    
         // border-bottom: 1px solid black;
     }
 }
@@ -80,6 +104,8 @@ body {
     }
     h6 {
         padding-top: 25px;
+        font-family: 'Playfair Display SC', serif;
+
     }
 }
 
@@ -102,19 +128,19 @@ body {
 // LIST PAGE
 
 .listContainer {
-    background-color: white;
-    margin-top: 25px;;
+    background-color: #f4f4f4;
+    margin-top: 0px;
     .listTable {
         width: 90%;
         margin: auto;
-        margin-top: 25px;
-        margin-bottom: 25px;
+        // margin-top: 25px;
+        padding-bottom: 25px;
     }
     .tableRowData:hover {
         box-shadow: 12px 0 15px -4px rgba(99, 98, 97, 0.4), -12px 0 15px -4px rgba(99, 98, 97, 0.4);
     }
     .tableRow {
-        background-color:#f4f4f4;
+        background-color: white;
         height: 80px;
         box-shadow: inset 0px 1px 3px #7c7b7b;
     }
@@ -143,11 +169,6 @@ body {
     }
 }
 
-.searchDiv {
-    width: 90%;
-    margin: auto;
-}
-
 table {
     box-shadow: inset 0px 1px 3px #7c7b7b;
     border-top-left-radius: 25px;
@@ -160,21 +181,30 @@ table {
 
 .listNavHeader {
     background-image: url("../images/nashville-skyline.png");
+    background-color: #f4f4f4;
     height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 0 4px 2px -2px gray;
     h4 {
         margin-bottom: 0;
         color: #c0b283;
         text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
     }
 }
 
+.navBackground {
+    background-color: #f4f4f4; 
+}
+
 .secondaryListNav {
+    background-color: #f4f4f4;
     width: 90%;
     margin: auto;
-    border-bottom: 1.5px solid #f4f4f4;
-    margin-top: 25px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    padding-top: 25px;
     a {
         padding-top: 0px;
         color: #c0b283;
@@ -187,10 +217,13 @@ table {
 .nav-tabs {
     width: 90%;
     margin: auto;  
+    background-color: #f4f4f4;
+
 }
 
 .nav-tabs {
     position: absolute;
+    background-color: #f4f4f4;
     bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -221,6 +254,7 @@ table {
 
 th {
     padding: 5px;
+    font-family: 'Playfair Display SC', serif;
     cursor: pointer;
     .price {
         cursor: pointer;
@@ -245,8 +279,13 @@ th {
     display: inline-block;
 }
 
+
+
 //////// MAP PAGE //////////////
 
+.mapAndSearchContainer {
+    background-color: #f4f4f4;
+}
 .mapContainer {
     width: 90%;
     margin: auto;
@@ -262,7 +301,7 @@ th {
     // border: 1px solid black;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    background-color:#f4f4f4;
+    background-color: white;
     box-shadow: inset 0px 1px 3px #7c7b7b;
     
     
@@ -275,13 +314,18 @@ th {
         border-top-left-radius: 25px;
         color: white;
         text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
 
     }
 }
 
 .searchDiv {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 90%;
+    margin: auto;
+    background-color: #f4f4f4;
 }
 
 .radios {
@@ -333,15 +377,16 @@ th {
 .modal-body {
     label {
         margin: 10px;
+
     }
 }
 
 .addStayHeader {
     background-color: rgba(245, 241, 241, 0.75);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    width: 90%;
-    margin: auto;
-    margin-top: 50px;
+    width: 50%;
+    // margin-left: 55px;
+    margin-top: 75px;
     margin-bottom: 25px;
     border-radius: 5px;
 
@@ -352,11 +397,31 @@ th {
     padding-bottom: 10px;
     width: 100%;
     margin: auto;
-    // margin-top: 25px;
-    // background-color: #dcd0c0;
+    // position: relative;
     background-image: url("../images/san-fran-large.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    h1 {
+        color: white;
+        font-family: 'Playfair Display SC', serif;
+    }
+    strong {
+        color:#c0b283
+    }
+}
+
+.addHeaderContainer {
+    width: 90%;
+    margin: auto;
+}
+
+.addHeader {
+    margin-top: 125px;
+    margin-left: 115px;
+    display: inline-block;
+    // position: absolute;
+    // right: 250px;
+    // top: 125px;
 }
 
 .addSearch {
@@ -372,8 +437,11 @@ th {
 .addStayHeaderText {
     width: 90%;
     margin-left: 25px;
+    // display: inline;
     h5 {
         padding-top: 20px;
+        font-family: 'Playfair Display SC', serif;
+
     }
     p {
         padding-bottom: 15px;
@@ -427,6 +495,8 @@ th {
 
 footer {
     text-align: center;
+    // padding-top: 25px;
+    // padding-top: 25px;
 }
 
 //////////// INDIVIDUAL PAGE ///////////////
@@ -442,8 +512,8 @@ footer {
 
 .individualStayPage {
     background-image: url("../images/miami.jpg");
-    // background-color: blue;
     padding-top: 50px;
+    padding-bottom: 50px;
     background-size: cover;
 
 }
@@ -454,14 +524,19 @@ footer {
     align-items: center;
     width: 90%;
     margin: auto;
+    // padding-bottom: 25px;
+    border-radius: 5px;
+
     // padding-top: 25px;
     // margin-top: 25px;
     // background-size: 900px;
     background-color: rgba(245, 241, 241, 0.75);
     h3 {
+        font-weight: bold;
         margin-top: 20px;
         margin-bottom: 10px;
         text-align: center;
+        font-family: 'Playfair Display SC', serif;
     }
 }
 
@@ -473,12 +548,15 @@ footer {
     width: 500px;
     text-align: left;
     background-color: white;
+    border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     h6 {
         padding: 10px;
         padding-left: 0px;
         margin-bottom: 0;
         font-weight: bold;
+        font-family: 'Playfair Display SC', serif;
+
     }
     span {
         padding-left: 10px;
@@ -495,6 +573,7 @@ footer {
     a {
         color: #373737;
         text-decoration: none;
+        cursor: pointer;
     }
     button {
         display: block;
@@ -510,6 +589,15 @@ footer {
 
 .individualDetail {
     width: 80%;
+    height: 75px;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #f4f4f4;
+}
+
+.individualDetailNotes {
+    width: 80%;
+    height: 125px;
     margin: auto;
     padding-bottom: 10px;
     border-bottom: 1.5px solid #f4f4f4;
@@ -529,6 +617,8 @@ footer {
     h6 {
         font-weight: bold;
         text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
         // padding: 10px;
     }
 
