@@ -23,14 +23,18 @@
                         <h6>YOUR REVIEW:</h6>
                         <div>{{stay.review}}</div><br>
                     </div>
-                    <div class="individualDetail">
+                    <div class="individualDetailNotes">
                         <h6>NOTES:</h6>
                         <div>{{stay.note}}</div><br>
                     </div>
                     <div class="viewSite">
-                        <a href="#!/stay/{{stay.stayId}}" ng-click="redirectToSite(stay.website, '_blank')" class="viewSite" ng-hide="!stay.website">View Site</a>
+                        <a ng-click="redirectToSite(stay.website, '_blank')" class="viewSite" ng-hide="!stay.website">View Site</a>
+                        <!-- <a href="#!/stay/{{stay.stayId}}" ng-hide="!stay.website">View Site</a> -->
+
                     </div>
-                    <button type="button" class="btn btn-secondary"><a ng-href="#!/edit/{{stay.stayId}}">EDIT</a></button>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editStayModal">EDIT</a></button>
+                    <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editStayModal"> <a ng-href="#!/edit/{{stay.stayId}}">EDIT</a></button> -->
+
                 </div>
             </div>
             <div class="individualMapContainer">
@@ -39,5 +43,64 @@
                         <marker position="{{stay.address}}" id={{stay.stayId}}></marker>
                 </ng-map>
             </div>
-    </div>      
+    </div>  
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="editStayModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">EDIT YOUR STAY</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modalOption">
+                        <label for="exampleFormControlInput1">Name:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.name" ng-value="name">
+                    </div>
+                    <div class="modalOption">
+                        <label for="exampleFormControlInput1">Image Url:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.url" ng-value="url">
+                    </div>
+                    <div class="modalOption">
+                        <label for="exampleFormControlInput1">Website:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.website" ng-value="website">
+                    </div>
+                    <div class="modalOption">
+                        <label for="exampleFormControlInput1">Price ($/night):</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="stay.price" ng-value="price">   
+                    </div>
+                    <div class="modalOption">
+                        <label for="exampleFormControlSelect1">Type:</label>
+                                <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.type">
+                                    <option>Hotel</option>
+                                    <option>AirBnb</option>
+                                    <option>Campsite</option>
+                                </select>
+                    </div>
+                    <div class="modalOption">
+                        <label for="exampleFormControlSelect1">Your Review:</label>
+                            <select class="form-control" id="exampleFormControlSelect1" ng-model="stay.review">
+                                <option>Stay here again</option>
+                                <option>Okay, but not great</option>
+                                <option>Run away</option>
+                            </select>
+                    </div>
+                    <div class="modalOption">
+                        <label for="exampleFormControlInput1">Personal Note:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Add a personal note about your stay..." ng-model="stay.note">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" ng-click="reloadStay()">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="updateStay()">SAVE CHANGES</button>
+                </div>
+                </div>
+            </div>
+     </div>  
+     
+     
 </div>

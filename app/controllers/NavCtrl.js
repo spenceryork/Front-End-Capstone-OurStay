@@ -7,7 +7,7 @@ angular.module("OurStayApp").controller("NavCtrl", function($scope, AuthFactory,
     $scope.navBar = [
         {
             name: "Add New",
-            url: "#!/home"
+            url: "#!/add"
         },
         {
             name: "View Past Stays",
@@ -20,13 +20,13 @@ angular.module("OurStayApp").controller("NavCtrl", function($scope, AuthFactory,
         },
         {
             name: "Logout",
-            url: "#!/landing"
+            url: "#!/home"
         }
     ];
 
     $scope.go = (navUrl) => {
         console.log("navUrl", navUrl);
-        if (navUrl === "#!/landing") {
+        if (navUrl === "#!/home") {
           AuthFactory.logout();
         } else {
           $window.location.href = navUrl;

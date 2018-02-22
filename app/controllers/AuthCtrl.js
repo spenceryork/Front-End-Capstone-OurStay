@@ -6,7 +6,7 @@ angular.module("OurStayApp").controller("AuthCtrl", function($scope, FbFactory, 
     $scope.googleLoginAuth = () => {
         AuthFactory.login()
         .then(user => {
-            console.log('User: ', user);
+            // console.log('User: ', user);
             $window.location = "/#!/home";
         });
     }; 
@@ -21,8 +21,8 @@ angular.module("OurStayApp").controller("AuthCtrl", function($scope, FbFactory, 
     });
 
     $scope.registerNewUser = () => {
-        console.log("is anything happening?", $scope.user);
-        console.log("what is authObj", AuthFactory);
+        // console.log("is anything happening?", $scope.user);
+        // console.log("what is authObj", AuthFactory);
 
         AuthFactory.createUser($scope.user)
         .then( (user) => {
@@ -38,7 +38,7 @@ angular.module("OurStayApp").controller("AuthCtrl", function($scope, FbFactory, 
     $scope.loginWithEmail = () => {
         AuthFactory.loginUser($scope.user)
         .then(user => {
-            console.log("logged in user", user);
+            // console.log("logged in user", user);
             $window.location.href = "#!/home";
         })
         .catch( (err) => {
