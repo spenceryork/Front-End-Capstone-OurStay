@@ -16,7 +16,7 @@ OurStay is a web app designed to allow users to track all of the previous locati
 
 # Fork or Download
 
-Fork or download the OurStay repo then follow these instructions will in the OurStay director:
+Fork or download the OurStay repo then follow these instructions while in the OurStay directory:
 
 ```
 npm install
