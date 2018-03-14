@@ -18,9 +18,9 @@ angular.module("OurStayApp", ["ngRoute", "ngMap"])
     .config($routeProvider => {
         $routeProvider
         .when("/", {
-            templateUrl: "partials/landing.html",
-            controller: "AddStayCtrl",
-            resolve: { isAuth }
+            templateUrl: "partials/landing.html"
+            // controller: "AddStayCtrl"
+            // resolve: { isAuth }
         })
         .when("/login", {
             templateUrl: "partials/login.html",
