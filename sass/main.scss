@@ -79,6 +79,8 @@ body {
 
 // LOGIN PAGE
 
+
+
 .loginContainer {
     background-image: url("../images/downtown.png");
     background-size: 900px;
@@ -98,6 +100,7 @@ body {
     color: white;
     padding-top: 30px;
     padding-bottom: 30px;
+    margin-bottom: 150px;
     button {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -122,6 +125,13 @@ body {
     padding-left: 75px;
 }
 
+.loginText {
+    color: white;
+    width: 50%;
+    padding-right: 45px;
+    padding-top: 25px;    
+}
+
 
 
 
@@ -134,7 +144,8 @@ body {
         width: 90%;
         margin: auto;
         // margin-top: 25px;
-        padding-bottom: 25px;
+        // margin-bottom: 50px;
+        padding-bottom: 50px;
     }
     .tableRowData:hover {
         box-shadow: 12px 0 15px -4px rgba(99, 98, 97, 0.4), -12px 0 15px -4px rgba(99, 98, 97, 0.4);
@@ -157,6 +168,7 @@ body {
         background-color: #373737;
         height: 15px;
         border-bottom-left-radius: 25px;
+        margin-bottom: 50px;
     }
 
     a {
@@ -172,7 +184,6 @@ body {
 table {
     box-shadow: inset 0px 1px 3px #7c7b7b;
     border-top-left-radius: 25px;
-
 }
 
 .roundedTable {
@@ -240,6 +251,11 @@ table {
         padding-bottom: 7px;
     }
 }
+
+.footerSpace {
+    height: 70px;
+}
+
 
 .delete {
     color: rgb(190, 2, 2);
@@ -496,7 +512,6 @@ th {
 
 footer {
     text-align: center;
-    // padding-top: 25px;
     // padding-top: 25px;
 }
 
