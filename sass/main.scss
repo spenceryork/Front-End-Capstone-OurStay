@@ -58,8 +58,6 @@ body {
     width: 100%;
     margin: auto;
     margin-top: 25px;
-    // margin-left: 15px;
-    // margin-right: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -73,13 +71,10 @@ body {
         color: black;
         font-family: 'Playfair Display SC', serif;
         text-decoration: underline    
-        // border-bottom: 1px solid black;
     }
 }
 
 // LOGIN PAGE
-
-
 
 .loginContainer {
     background-image: url("../images/downtown.png");
@@ -90,7 +85,6 @@ body {
     margin-top: 25px;
     margin: auto;
     width: 190px;
-    // background-color: red;
 }
 
 .loginForm {
@@ -133,8 +127,6 @@ body {
 }
 
 
-
-
 // LIST PAGE
 
 .listContainer {
@@ -143,8 +135,6 @@ body {
     .listTable {
         width: 90%;
         margin: auto;
-        // margin-top: 25px;
-        // margin-bottom: 50px;
         padding-bottom: 50px;
     }
     .tableRowData:hover {
@@ -295,8 +285,6 @@ th {
     display: inline-block;
 }
 
-
-
 //////// MAP PAGE //////////////
 
 .mapAndSearchContainer {
@@ -363,21 +351,6 @@ th {
 
 /////////// ADD STAY ///////////////
 
-// .headerContainer {
-//     background-image: url("../images/sanFran.jpg");
-//     // background-size: 900px;
-//     height: 250px;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     flex-direction: column;
-//     margin: auto;
-//     color: white;
-//     box-shadow: 0 5px 5px -5px #333;
-//     // border-bottom: solid 10px rgba(218, 226, 98, 0.10);
-// }
 
 .formMapContainer {
     background-color: #f4f4f4;
@@ -402,7 +375,6 @@ th {
     background-color: rgba(245, 241, 241, 0.75);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     width: 50%;
-    // margin-left: 55px;
     margin-top: 75px;
     margin-bottom: 25px;
     border-radius: 5px;
@@ -414,7 +386,6 @@ th {
     padding-bottom: 10px;
     width: 100%;
     margin: auto;
-    // position: relative;
     background-image: url("../images/san-fran-large.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -436,9 +407,6 @@ th {
     margin-top: 125px;
     margin-left: 115px;
     display: inline-block;
-    // position: absolute;
-    // right: 250px;
-    // top: 125px;
 }
 
 .addSearch {
@@ -454,7 +422,6 @@ th {
 .addStayHeaderText {
     width: 90%;
     margin-left: 25px;
-    // display: inline;
     h5 {
         padding-top: 20px;
         font-family: 'Playfair Display SC', serif;
@@ -468,7 +435,6 @@ th {
 
 .addStayForm {
     width: 40%;
-    // padding-left: 25px;
     padding-right: 50px;
     height: 250px;
     box-shadow: 4px 0 5px -5px #333;
@@ -512,7 +478,6 @@ th {
 
 footer {
     text-align: center;
-    // padding-top: 25px;
 }
 
 //////////// INDIVIDUAL PAGE ///////////////
@@ -540,12 +505,7 @@ footer {
     align-items: center;
     width: 90%;
     margin: auto;
-    // padding-bottom: 25px;
     border-radius: 5px;
-
-    // padding-top: 25px;
-    // margin-top: 25px;
-    // background-size: 900px;
     background-color: rgba(245, 241, 241, 0.75);
     h3 {
         font-weight: bold;
@@ -595,7 +555,6 @@ footer {
         display: block;
         margin: auto;
         width: 100px;
-        // margin-left: 40px;
         margin-bottom: 25px;
         a {
             color: white;
@@ -634,8 +593,6 @@ footer {
         font-weight: bold;
         text-align: center;
         font-family: 'Playfair Display SC', serif;
-
-        // padding: 10px;
     }
 
     ng-map {
@@ -690,8 +647,219 @@ form {
 
 
 
+@media only screen and (max-width: 600px) {
+
+    // NAV
+
+    .navbar {
+        background-color: #f4f4f4;
+        box-shadow: 0 5px 5px -5px #333;
+        a {
+            color: #373737;
+        }
+        strong {
+            font-family: 'Marck Script', cursive;
+            font-size: 1.25em;
+            color:#c0b283
+        }
+        .logo {
+            display: none;
+        }
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between !important;
+        }
+        .nav-link {
+            padding: 6px;
+        }
+    }
+    // LOGIN PAGE
+    
+        .loginContainer {
+            height: 650px;
+        }
+    
+        .loginButtons {
+            margin-top: 25px;
+            width: 190px;
+        }
+    
+        .loginForm {
+            display: flex;
+            flex-direction: column !important;
+            margin-left: 25px;
+            padding-right: 50px;
+            color: white;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 150px;
+            button {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            h6 {
+                padding-top: 25px;
+                font-family: 'Playfair Display SC', serif;
+    
+            }
+        }
+    
+        .credentials {
+            input {
+            width: 300px;
+            }
+        }
+    
+        .googleCredentials {
+            padding-top: 18px;
+            padding-left: 25px;
+        }
+    
+        .loginText {
+            color: white;
+            width: 100%;
+            padding-right: 45px;
+            padding-top: 25px;    
+        }
+
+            /////////// ADD STAY ///////////////
+
+
+        .formMapContainer {
+            background-color: #f4f4f4;
+        }
+
+        .modal-header {
+            background-color: #f4f4f4;
+        }
+
+        .modal-footer {
+            background-color: #f4f4f4;
+        }
+
+        .modal-body {
+            label {
+                margin: 10px;
+            }
+        }
+
+        .addStayHeader {
+            background-color: rgba(245, 241, 241, 0.75);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            width: 100% !important;
+            margin-top: 75px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+
+        }
+
+        .addMainBody {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            margin: auto;
+            background-image: url("../images/san-fran-large.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            h1 {
+                color: white;
+                font-family: 'Playfair Display SC', serif;
+            }
+            strong {
+                color:#c0b283;
+            }
+        }
+
+        .addHeaderContainer {
+            width: 90%;
+            margin: auto;
+        }
+
+        .addHeader {
+            margin-top: 125px;
+            margin-left: 115px;
+            display: inline-block;
+        }
+
+        .addSearch {
+            width: 90%;
+            margin: auto;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            
+            input {
+                margin-top: 25px;
+            }
+        }
+
+        .addStayHeaderText {
+            width: 90%;
+            margin-left: 25px;
+            h5 {
+                padding-top: 20px;
+                font-family: 'Playfair Display SC', serif;
+
+            }
+            p {
+                padding-bottom: 15px;
+                margin-bottom: 0;
+            }
+        }
+
+        .addStayForm {
+            width: 40%;
+            padding-right: 50px;
+            height: 250px;
+            box-shadow: 4px 0 5px -5px #333;
+            label {
+                color: black;
+            }
+            input {
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+            button {
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+        }
+
+        .searchInput:nth-child(2) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .addMap {
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .formMapContainer {
+            width: 90%;
+            display: flex;
+            display: column !important;
+            background-color: rgba(245, 241, 241, 0.75);
+            color: #f4f4f4;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            border-radius: 5px;
+            ng-map {
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                // display: flex;
+                // display: column !important;
+            }
+        }
+
+
+        footer {
+            text-align: center;
+        }
+
+}
+
+// 
 
 
 
-
- 
