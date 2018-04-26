@@ -725,7 +725,9 @@ form {
     // LOGIN PAGE
     
         .loginContainer {
-            height: 650px;
+            height: 700px;
+            background-image: url("../images/downtown.png");
+            background-size: cover !important;
         }
     
         .loginButtons {
@@ -734,10 +736,11 @@ form {
         }
     
         .loginForm {
+            width: 100%;
             display: flex;
             flex-direction: column !important;
-            margin-left: 25px;
-            padding-right: 50px;
+            margin: 0 auto;
+            padding-right: 0px;
             color: white;
             padding-top: 30px;
             padding-bottom: 30px;
@@ -754,21 +757,27 @@ form {
         }
     
         .credentials {
+            padding-right: 0px;
+            border-right: 0px;
+            width: 90%;
+            margin: 0 auto;
             input {
-            width: 300px;
+            width: 100%;
             }
         }
     
         .googleCredentials {
-            padding-top: 18px;
-            padding-left: 25px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin: 0 auto;
         }
     
         .loginText {
             color: white;
             width: 100%;
-            padding-right: 45px;
-            padding-top: 25px;    
+            padding-right: 0px;
+            padding-top: 0px;  
+            margin-left: 5px;  
         }
 
             /////////// ADD STAY ///////////////
@@ -1185,7 +1194,7 @@ th {
     margin-left: 0px;
     width: 100%;
     text-align: left;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     h6 {
@@ -1266,6 +1275,7 @@ th {
     width: 100% !important; 
     height: 325px;
 }
+
 
 
 
