@@ -748,10 +748,9 @@ form {
             background-color: rgba(245, 241, 241, 0.75);
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             width: 100% !important;
-            margin-top: 75px;
-            margin-bottom: 25px;
+            margin-top: 5px;
+            margin-bottom: 5px;
             border-radius: 5px;
-
         }
 
         .addMainBody {
@@ -772,13 +771,18 @@ form {
         }
 
         .addHeaderContainer {
+            display: block !important;
             width: 90%;
             margin: auto;
+            h1 {
+                margin: 0 auto !important;
+            }
         }
 
         .addHeader {
-            margin-top: 125px;
-            margin-left: 115px;
+            margin-top: 12px !important;
+            margin-left: 12px !important;
+            margin-bottom: 12px;
             display: inline-block;
         }
 
@@ -807,10 +811,11 @@ form {
         }
 
         .addStayForm {
-            width: 40%;
-            padding-right: 50px;
+            width: 100%;
             height: 250px;
             box-shadow: 4px 0 5px -5px #333;
+            margin-bottom: 5px;
+            padding-right: 12px !important;
             label {
                 color: black;
             }
@@ -829,19 +834,22 @@ form {
 
         .addMap {
             justify-content: center;
-            margin: 0 auto;
+            margin: 0 auto !important;
+            align-items: center !important;
+            ng-map {
+                width: 100% !important;
+            }
         }
 
         .formMapContainer {
             width: 90%;
-            display: flex;
-            display: column !important;
+            display: block !important;
             background-color: rgba(245, 241, 241, 0.75);
             color: #f4f4f4;
             margin: auto;
             margin-top: 25px;
             margin-bottom: 25px;
-            padding-top: 25px;
+            padding-top: 10px !important;
             padding-bottom: 25px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             border-radius: 5px;
