@@ -662,9 +662,6 @@ form {
             font-size: 1.25em;
             color:#c0b283
         }
-        .logo {
-            display: none;
-        }
         .nav {
             display: flex;
             flex-direction: row;
@@ -867,7 +864,74 @@ form {
 
 }
 
-// 
+//////// MAP PAGE //////////////
+
+.mapAndSearchContainer {
+    background-color: #f4f4f4;
+    padding-bottom: 25px;
+}
+.mapContainer {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 25px;
+    display: block !important;
+    ng-map {
+        width: 100% !important;
+    }
+}
+
+.search {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.viewController {
+    width: 100%;
+    // border: 1px solid black;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 0px !important;
+    background-color: white;
+    box-shadow: inset 0px 1px 3px #7c7b7b;
+    
+    
+    h5 {
+        box-shadow: inset 0px 1px 3px white;
+        // padding-left: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #373737;
+        border-top-left-radius: 25px;
+        color: white;
+        text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
+
+    }
+}
+
+.searchDiv {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 90%;
+    margin: auto;
+    background-color: #f4f4f4;
+}
+
+.radios {
+    margin-left: 25px;
+    margin-top: 25px;
+    padding-bottom: 20px;
+}
+
+.radio {
+    margin-top: 10px;
+    span {
+        margin-left: 7px;
+    }
+}
+
+.selectCat {
+    font-size: 1.25em;
+}
 
 
 
