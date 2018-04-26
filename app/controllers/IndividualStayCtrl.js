@@ -4,10 +4,8 @@ angular.module("OurStayApp").controller("IndividualStayCtrl", function($scope, F
 
     FbFactory.getStayDetails($routeParams.stayId)
     .then( (stay) => {
-        // console.log("stay that should be edited", stay);
         stay.stayId = $routeParams.stayId;
         $scope.stay = stay;
-        console.log("scope stay", stay);
     });
 
 
@@ -31,7 +29,6 @@ angular.module("OurStayApp").controller("IndividualStayCtrl", function($scope, F
         $window.setTimeout (function() {
             $route.reload(`/stay/${$routeParams.stayId}`);
         },500);
-        console.log("reloadStay did run");
     };
 
     $scope.redirectToSite = function(stayWebsite) {

@@ -25,7 +25,6 @@ angular.module("OurStayApp").factory("FbFactory", ($http, $q) => {
                         data.data[key].stayId = key;
                     });
                     let staysArr = Object.values(data.data);
-                console.log("getPastStays Data", data.data); 
                 resolve(staysArr);
             })
             .catch( (error) => {
@@ -39,7 +38,6 @@ angular.module("OurStayApp").factory("FbFactory", ($http, $q) => {
             $http
             .get(`https://our-stay.firebaseio.com/stays/${stayId}.json`)
             .then( (data) => {
-                console.log("getStayDetails", data); 
                 resolve(data.data);
             })
             .catch( (error) => {
@@ -53,7 +51,6 @@ angular.module("OurStayApp").factory("FbFactory", ($http, $q) => {
             $http
             .put(`https://our-stay.firebaseio.com/stays/${stayId}.json`, JSON.stringify(stay) )
             .then( (data) => {
-                console.log("getStayDetails", data); 
                 resolve(data);
             })
             .catch( (error) => {
