@@ -17,11 +17,11 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-                <li class="nav-item" ng-repeat="item in navBar"> 
-                    <a class="nav-link" ng-click="go(item.url)" ng-show="{{item.bang}}loggedIn" href="{{item.url}}">{{item.name}}</a>
-                </li>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav ">
+            <li class="nav-item" ng-repeat="item in navBar"> 
+                <a class="nav-link" ng-click="go(item.url)" ng-show="{{item.bang}}loggedIn" href="{{item.url}}">{{item.name}}</a>
+            </li>
         </ul>
     </div>
 </nav>

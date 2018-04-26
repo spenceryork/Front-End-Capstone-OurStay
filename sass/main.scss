@@ -13,6 +13,9 @@ body {
     a {
         color: #373737;
     }
+    div {
+        justify-content: end !important;
+    }
     strong {
         font-family: 'Marck Script', cursive;
         font-size: 1.25em;
@@ -662,15 +665,63 @@ form {
             font-size: 1.25em;
             color:#c0b283
         }
-        .nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between !important;
-        }
         .nav-link {
             padding: 6px;
         }
     }
+
+    // LADNING PAGE
+
+.landingContainer {
+    width: 100%;
+}
+
+.headingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background-image: url("../images/boston.jpg");
+    background-size: cover;
+	background-repeat: no-repeat;
+    height: 400px;
+    color: white;
+    margin: auto;
+    h1 {
+        color: white;
+        font-family: 'Playfair Display SC', serif;
+    }
+    strong {
+        color:#c0b283
+    }
+}
+
+.headerText {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+}
+
+.cardContainer {
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.landingCard {
+    margin-left: 10px;
+    width: 100%;
+    h5 {
+        text-align: left;
+        color: black;
+        font-family: 'Playfair Display SC', serif;
+        text-decoration: underline    
+    }
+}
     // LOGIN PAGE
     
         .loginContainer {
@@ -862,6 +913,164 @@ form {
             text-align: center;
         }
 
+
+
+// LIST PAGE
+
+.listContainer {
+    background-color: #f4f4f4;
+    margin-top: 0px;
+    .listTable {
+        width: 100%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+    .tableRowData:hover {
+        box-shadow: 12px 0 15px -4px rgba(99, 98, 97, 0.4), -12px 0 15px -4px rgba(99, 98, 97, 0.4);
+    }
+    .tableRow {
+        background-color: white;
+        height: 80px;
+        box-shadow: inset 0px 1px 3px #7c7b7b;
+    }
+    .tableRowHeader {
+        background-color: #373737;
+        color: white;
+        box-shadow: inset 0px 1px 3px white;
+        height: 73px;
+
+        border-top-left-radius: 25px;
+    }
+
+    .tableRowFooter {
+        background-color: #373737;
+        height: 15px;
+        border-bottom-left-radius: 25px;
+        margin-bottom: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #373737;
+    }
+    .icon {
+        opacity: 0.75;
+        color: #c0b283;
+    }
+}
+
+table {
+    box-shadow: inset 0px 1px 3px #7c7b7b;
+    border-top-left-radius: 25px;
+}
+
+.roundedTable {
+    border-top-left-radius: 25px;
+}
+
+.listNavHeader {
+    background-image: url("../images/nashville-skyline.png");
+    background-color: #f4f4f4;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 2px -2px gray;
+    h4 {
+        margin-bottom: 0;
+        color: #c0b283;
+        text-align: center;
+        font-family: 'Playfair Display SC', serif;
+
+    }
+}
+
+.navBackground {
+    background-color: #f4f4f4; 
+}
+
+.secondaryListNav {
+    background-color: #f4f4f4;
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    padding-top: 25px;
+    a {
+        padding-top: 0px;
+        color: #c0b283;
+    }
+    .active {
+        border-bottom: 2px solid #dcd0c0;
+    }
+}
+
+.nav-tabs {
+    width: 90%;
+    margin: auto;  
+    background-color: #f4f4f4;
+
+}
+
+.nav-tabs {
+    position: absolute;
+    background-color: #f4f4f4;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: auto;
+}
+
+.listTable {
+    width: 100%;
+    td {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+.footerSpace {
+    height: 70px;
+}
+
+
+.delete {
+    color: rgb(190, 2, 2);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: rgb(190, 2, 2);
+    opacity: 1;
+}
+
+th {
+    padding: 5px;
+    font-family: 'Playfair Display SC', serif;
+    cursor: pointer;
+    .price {
+        cursor: pointer;
+    }
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+    display: inline-block;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid white;
+    display: inline-block;
 }
 
 //////// MAP PAGE //////////////
@@ -871,7 +1080,7 @@ form {
     padding-bottom: 25px;
 }
 .mapContainer {
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-bottom: 25px;
     display: block !important;
@@ -890,7 +1099,7 @@ form {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 0px !important;
     background-color: white;
-    box-shadow: inset 0px 1px 3px #7c7b7b;
+    box-shadow: inset 0px 0px 0px #7c7b7b;
     
     
     h5 {
@@ -933,5 +1142,137 @@ form {
     font-size: 1.25em;
 }
 
+//////////// INDIVIDUAL PAGE ///////////////
 
+.individualImage {
+    img {
+        height: 200px;
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+}
+
+.individualStayPage {
+    background-image: url("../images/miami.jpg");
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-size: cover;
+
+}
+
+.individualStayContainer {
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgba(245, 241, 241, 0.75);
+    h3 {
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-family: 'Playfair Display SC', serif;
+    }
+}
+
+.individualCard {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    h6 {
+        padding: 10px;
+        padding-left: 0px;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-family: 'Playfair Display SC', serif;
+
+    }
+    span {
+        padding-left: 10px;
+        white-space: pre-wrap;
+    }
+    .viewSite {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+    a {
+        color: #373737;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    button {
+        display: block;
+        margin: auto;
+        width: 100px;
+        margin-bottom: 25px;
+        a {
+            color: white;
+        }
+    }
+}
+
+.individualDetail {
+    width: 80%;
+    height: 75px;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #f4f4f4;
+}
+
+.individualDetailNotes {
+    width: 80%;
+    height: 125px;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #f4f4f4;
+}
+
+.viewSite {
+    a {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+.individualMapContainer {
+    align-self: flex-start;
+    width: 100%;   
+    margin-top: 35px;
+    h6 {
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Playfair Display SC', serif;
+    }
+
+    ng-map {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+}
+.individualMap {
+    margin: 0 auto;
+    width: 100% !important; 
+    height: 325px;
+}
+
+
+
+
+
+
+
+
+}
 
