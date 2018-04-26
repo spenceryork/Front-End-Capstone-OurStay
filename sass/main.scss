@@ -670,619 +670,607 @@ form {
         }
     }
 
-    // LADNING PAGE
+        // LADNING PAGE
 
-.landingContainer {
-    width: 100%;
-}
+    .landingContainer {
+        width: 100%;
+    }
 
-.headingContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    background-image: url("../images/boston.jpg");
-    background-size: cover;
-	background-repeat: no-repeat;
-    height: 400px;
-    color: white;
-    margin: auto;
-    h1 {
+    .headingContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        background-image: url("../images/boston.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
         color: white;
-        font-family: 'Playfair Display SC', serif;
+        margin: auto;
+        h1 {
+            color: white;
+            font-family: 'Playfair Display SC', serif;
+        }
+        strong {
+            color:#c0b283
+        }
     }
-    strong {
-        color:#c0b283
+
+    .headerText {
+        position: absolute;
+        left: 40px;
+        top: 10px;
     }
-}
 
-.headerText {
-    position: absolute;
-    left: 40px;
-    top: 10px;
-}
-
-.cardContainer {
-    width: 95%;
-    margin: auto;
-    margin-top: 15px;
-    display: block;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.landingCard {
-    margin-left: 10px;
-    width: 100%;
-    h5 {
-        text-align: left;
-        color: black;
-        font-family: 'Playfair Display SC', serif;
-        text-decoration: underline    
+    .cardContainer {
+        width: 95%;
+        margin: auto;
+        margin-top: 15px;
+        display: block;
+        flex-direction: row;
+        justify-content: center;
     }
-}
+
+    .landingCard {
+        margin-left: 10px;
+        width: 100%;
+        h5 {
+            text-align: left;
+            color: black;
+            font-family: 'Playfair Display SC', serif;
+            text-decoration: underline    
+        }
+    }
     // LOGIN PAGE
     
-        .loginContainer {
-            height: 700px;
-            background-image: url("../images/downtown.png");
-            background-size: cover !important;
-        }
-    
-        .loginButtons {
-            margin-top: 25px;
-            width: 190px;
-        }
-    
-        .loginForm {
-            width: 100%;
-            display: flex;
-            flex-direction: column !important;
-            margin: 0 auto;
-            padding-right: 0px;
-            color: white;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            margin-bottom: 150px;
-            button {
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-            h6 {
-                padding-top: 25px;
-                font-family: 'Playfair Display SC', serif;
-    
-            }
-        }
-    
-        .credentials {
-            padding-right: 0px;
-            border-right: 0px;
-            width: 90%;
-            margin: 0 auto;
-            input {
-            width: 100%;
-            }
-        }
-    
-        .googleCredentials {
-            padding-top: 0px;
-            padding-left: 0px;
-            margin: 0 auto;
-        }
-    
-        .loginText {
-            color: white;
-            width: 100%;
-            padding-right: 0px;
-            padding-top: 0px;  
-            margin-left: 5px;  
-        }
+    .loginContainer {
+        height: 700px;
+        background-image: url("../images/downtown.png");
+        background-size: cover !important;
+    }
 
-            /////////// ADD STAY ///////////////
+    .loginButtons {
+        margin-top: 25px;
+        width: 190px;
+    }
 
-
-        .formMapContainer {
-            background-color: #f4f4f4;
-        }
-
-        .modal-header {
-            background-color: #f4f4f4;
-        }
-
-        .modal-footer {
-            background-color: #f4f4f4;
-        }
-
-        .modal-body {
-            label {
-                margin: 10px;
-            }
-        }
-
-        .addStayHeader {
-            background-color: rgba(245, 241, 241, 0.75);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            width: 100% !important;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-        }
-
-        .addMainBody {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 100%;
-            margin: auto;
-            background-image: url("../images/san-fran-large.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            h1 {
-                color: white;
-                font-family: 'Playfair Display SC', serif;
-            }
-            strong {
-                color:#c0b283;
-            }
-        }
-
-        .addHeaderContainer {
-            display: block !important;
-            width: 90%;
-            margin: auto;
-            h1 {
-                margin: 0 auto !important;
-            }
-        }
-
-        .addHeader {
-            margin-top: 12px !important;
-            margin-left: 12px !important;
-            margin-bottom: 12px;
-            display: inline-block;
-        }
-
-        .addSearch {
-            width: 90%;
-            margin: auto;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            
-            input {
-                margin-top: 25px;
-            }
-        }
-
-        .addStayHeaderText {
-            width: 90%;
-            margin-left: 25px;
-            h5 {
-                padding-top: 20px;
-                font-family: 'Playfair Display SC', serif;
-
-            }
-            p {
-                padding-bottom: 15px;
-                margin-bottom: 0;
-            }
-        }
-
-        .addStayForm {
-            width: 100%;
-            height: 250px;
-            box-shadow: 4px 0 5px -5px #333;
-            margin-bottom: 5px;
-            padding-right: 12px !important;
-            label {
-                color: black;
-            }
-            input {
-                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            }
-            button {
-                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            }
-        }
-
-        .searchInput:nth-child(2) {
+    .loginForm {
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+        margin: 0 auto;
+        padding-right: 0px;
+        color: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 150px;
+        button {
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        h6 {
+            padding-top: 25px;
+            font-family: 'Playfair Display SC', serif;
 
-        .addMap {
-            justify-content: center;
+        }
+    }
+
+    .credentials {
+        padding-right: 0px;
+        border-right: 0px;
+        width: 90%;
+        margin: 0 auto;
+        input {
+        width: 100%;
+        }
+    }
+
+    .googleCredentials {
+        padding-top: 0px;
+        padding-left: 0px;
+        margin: 0 auto;
+    }
+
+    .loginText {
+        color: white;
+        width: 100%;
+        padding-right: 0px;
+        padding-top: 0px;  
+        margin-left: 5px;  
+    }
+
+        /////////// ADD STAY ///////////////
+
+
+    .formMapContainer {
+        background-color: #f4f4f4;
+    }
+
+    .modal-header {
+        background-color: #f4f4f4;
+    }
+
+    .modal-footer {
+        background-color: #f4f4f4;
+    }
+
+    .modal-body {
+        label {
+            margin: 10px;
+        }
+    }
+
+    .addStayHeader {
+        background-color: rgba(245, 241, 241, 0.75);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        width: 100% !important;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .addMainBody {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        margin: auto;
+        background-image: url("../images/san-fran-large.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        h1 {
+            color: white;
+            font-family: 'Playfair Display SC', serif;
+        }
+        strong {
+            color:#c0b283;
+        }
+    }
+
+    .addHeaderContainer {
+        display: block !important;
+        width: 90%;
+        margin: auto;
+        h1 {
             margin: 0 auto !important;
-            align-items: center !important;
-            ng-map {
-                width: 100% !important;
-            }
         }
+    }
 
-        .formMapContainer {
-            width: 90%;
-            display: block !important;
-            background-color: rgba(245, 241, 241, 0.75);
-            color: #f4f4f4;
-            margin: auto;
+    .addHeader {
+        margin-top: 12px !important;
+        margin-left: 12px !important;
+        margin-bottom: 12px;
+        display: inline-block;
+    }
+
+    .addSearch {
+        width: 90%;
+        margin: auto;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        
+        input {
             margin-top: 25px;
-            margin-bottom: 25px;
-            padding-top: 10px !important;
-            padding-bottom: 25px;
+        }
+    }
+
+    .addStayHeaderText {
+        width: 90%;
+        margin-left: 25px;
+        h5 {
+            padding-top: 20px;
+            font-family: 'Playfair Display SC', serif;
+
+        }
+        p {
+            padding-bottom: 15px;
+            margin-bottom: 0;
+        }
+    }
+
+    .addStayForm {
+        width: 100%;
+        height: 250px;
+        box-shadow: 4px 0 5px -5px #333;
+        margin-bottom: 5px;
+        padding-right: 12px !important;
+        label {
+            color: black;
+        }
+        input {
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            border-radius: 5px;
-            ng-map {
-                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-                // display: flex;
-                // display: column !important;
-            }
         }
-
-
-        footer {
-            text-align: center;
+        button {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
+    }
+
+    .searchInput:nth-child(2) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .addMap {
+        justify-content: center;
+        margin: 0 auto !important;
+        align-items: center !important;
+        ng-map {
+            width: 100% !important;
+        }
+    }
+
+    .formMapContainer {
+        width: 90%;
+        display: block !important;
+        background-color: rgba(245, 241, 241, 0.75);
+        color: #f4f4f4;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-top: 10px !important;
+        padding-bottom: 25px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        border-radius: 5px;
+        ng-map {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+    }
+
+    footer {
+        text-align: center;
+    }
 
 
 
 // LIST PAGE
 
-.listContainer {
-    background-color: #f4f4f4;
-    margin-top: 0px;
-    .listTable {
-        width: 100%;
-        margin: auto;
-        padding-bottom: 50px;
-    }
-    .tableRowData:hover {
-        box-shadow: 12px 0 15px -4px rgba(99, 98, 97, 0.4), -12px 0 15px -4px rgba(99, 98, 97, 0.4);
-    }
-    .tableRow {
-        background-color: white;
-        height: 80px;
-        box-shadow: inset 0px 1px 3px #7c7b7b;
-    }
-    .tableRowHeader {
-        background-color: #373737;
-        color: white;
-        box-shadow: inset 0px 1px 3px white;
-        height: 73px;
-
-        border-top-left-radius: 25px;
-    }
-
-    .tableRowFooter {
-        background-color: #373737;
-        height: 15px;
-        border-bottom-left-radius: 25px;
-        margin-bottom: 50px;
-    }
-
-    a {
-        text-decoration: none;
-        color: #373737;
-    }
-    .icon {
-        opacity: 0.75;
-        color: #c0b283;
-    }
-}
-
-table {
-    box-shadow: inset 0px 1px 3px #7c7b7b;
-    border-top-left-radius: 25px;
-}
-
-.roundedTable {
-    border-top-left-radius: 25px;
-}
-
-.listNavHeader {
-    background-image: url("../images/nashville-skyline.png");
-    background-color: #f4f4f4;
-    height: 250px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: 0 4px 2px -2px gray;
-    h4 {
-        margin-bottom: 0;
-        color: #c0b283;
-        text-align: center;
-        font-family: 'Playfair Display SC', serif;
-
-    }
-}
-
-.navBackground {
-    background-color: #f4f4f4; 
-}
-
-.secondaryListNav {
-    background-color: #f4f4f4;
-    width: 90%;
-    margin: auto;
-    border-bottom: 1px solid rgb(177, 177, 177);
-    padding-top: 25px;
-    a {
-        padding-top: 0px;
-        color: #c0b283;
-    }
-    .active {
-        border-bottom: 2px solid #dcd0c0;
-    }
-}
-
-.nav-tabs {
-    width: 90%;
-    margin: auto;  
-    background-color: #f4f4f4;
-
-}
-
-.nav-tabs {
-    position: absolute;
-    background-color: #f4f4f4;
-    bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    width: 90%;
-    margin: auto;
-}
-
-.listTable {
-    width: 100%;
-    td {
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
-}
-
-.footerSpace {
-    height: 70px;
-}
-
-
-.delete {
-    color: rgb(190, 2, 2);
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-.delete:hover {
-    color: rgb(190, 2, 2);
-    opacity: 1;
-}
-
-th {
-    padding: 5px;
-    font-family: 'Playfair Display SC', serif;
-    cursor: pointer;
-    .price {
-        cursor: pointer;
-    }
-}
-
-.arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid white;
-    display: inline-block;
-}
-
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px solid white;
-    display: inline-block;
-}
-
-//////// MAP PAGE //////////////
-
-.mapAndSearchContainer {
-    background-color: #f4f4f4;
-    padding-bottom: 25px;
-}
-.mapContainer {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 25px;
-    display: block !important;
-    ng-map {
-        width: 100% !important;
-    }
-}
-
-.search {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.viewController {
-    width: 100%;
-    // border: 1px solid black;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 0px !important;
-    background-color: white;
-    box-shadow: inset 0px 0px 0px #7c7b7b;
-    
-    
-    h5 {
-        box-shadow: inset 0px 1px 3px white;
-        // padding-left: 25px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        background-color: #373737;
-        border-top-left-radius: 25px;
-        color: white;
-        text-align: center;
-        font-family: 'Playfair Display SC', serif;
-
-
-    }
-}
-
-.searchDiv {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    width: 90%;
-    margin: auto;
-    background-color: #f4f4f4;
-}
-
-.radios {
-    margin-left: 25px;
-    margin-top: 25px;
-    padding-bottom: 20px;
-}
-
-.radio {
-    margin-top: 10px;
-    span {
-        margin-left: 7px;
-    }
-}
-
-.selectCat {
-    font-size: 1.25em;
-}
-
-//////////// INDIVIDUAL PAGE ///////////////
-
-.individualImage {
-    img {
-        height: 200px;
-        width: 80%;
-        display: block;
-        margin: auto;
-    }
-}
-
-.individualStayPage {
-    background-image: url("../images/miami.jpg");
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-size: cover;
-
-}
-
-.individualStayContainer {
-    display: block;
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-    border-radius: 5px;
-    background-color: rgba(245, 241, 241, 0.75);
-    h3 {
-        font-weight: bold;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        text-align: center;
-        font-family: 'Playfair Display SC', serif;
-    }
-}
-
-.individualCard {
-    align-self: flex-start;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 0px;
-    width: 100%;
-    text-align: left;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    h6 {
-        padding: 10px;
-        padding-left: 0px;
-        margin-bottom: 0;
-        font-weight: bold;
-        font-family: 'Playfair Display SC', serif;
-
-    }
-    span {
-        padding-left: 10px;
-        white-space: pre-wrap;
-    }
-    .viewSite {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        display: block;
-        width: 80%;
-        text-align: center;
-        margin: auto;
-    }
-    a {
-        color: #373737;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    button {
-        display: block;
-        margin: auto;
-        width: 100px;
-        margin-bottom: 25px;
-        a {
+    .listContainer {
+        background-color: #f4f4f4;
+        margin-top: 0px;
+        .listTable {
+            width: 100%;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+        .tableRowData:hover {
+            box-shadow: 12px 0 15px -4px rgba(99, 98, 97, 0.4), -12px 0 15px -4px rgba(99, 98, 97, 0.4);
+        }
+        .tableRow {
+            background-color: white;
+            height: 80px;
+            box-shadow: inset 0px 1px 3px #7c7b7b;
+        }
+        .tableRowHeader {
+            background-color: #373737;
             color: white;
+            box-shadow: inset 0px 1px 3px white;
+            height: 73px;
+
+            border-top-left-radius: 25px;
+        }
+
+        .tableRowFooter {
+            background-color: #373737;
+            height: 15px;
+            border-bottom-left-radius: 25px;
+            margin-bottom: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #373737;
+        }
+        .icon {
+            opacity: 0.75;
+            color: #c0b283;
         }
     }
-}
 
-.individualDetail {
-    width: 80%;
-    height: 75px;
-    margin: auto;
-    padding-bottom: 10px;
-    border-bottom: 1.5px solid #f4f4f4;
-}
-
-.individualDetailNotes {
-    width: 80%;
-    height: 125px;
-    margin: auto;
-    padding-bottom: 10px;
-    border-bottom: 1.5px solid #f4f4f4;
-}
-
-.viewSite {
-    a {
-        margin-top: 100px;
-        margin-bottom: 100px;
+    table {
+        box-shadow: inset 0px 1px 3px #7c7b7b;
+        border-top-left-radius: 25px;
     }
-}
 
-.individualMapContainer {
-    align-self: flex-start;
-    width: 100%;   
-    margin-top: 35px;
-    h6 {
-        font-weight: bold;
-        text-align: center;
+    .roundedTable {
+        border-top-left-radius: 25px;
+    }
+
+    .listNavHeader {
+        background-image: url("../images/nashville-skyline.png");
+        background-color: #f4f4f4;
+        height: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0 4px 2px -2px gray;
+        h4 {
+            margin-bottom: 0;
+            color: #c0b283;
+            text-align: center;
+            font-family: 'Playfair Display SC', serif;
+
+        }
+    }
+
+    .navBackground {
+        background-color: #f4f4f4; 
+    }
+
+    .secondaryListNav {
+        background-color: #f4f4f4;
+        width: 90%;
+        margin: auto;
+        border-bottom: 1px solid rgb(177, 177, 177);
+        padding-top: 25px;
+        a {
+            padding-top: 0px;
+            color: #c0b283;
+        }
+        .active {
+            border-bottom: 2px solid #dcd0c0;
+        }
+    }
+
+    .nav-tabs {
+        width: 90%;
+        margin: auto;  
+        background-color: #f4f4f4;
+
+    }
+
+    .nav-tabs {
+        position: absolute;
+        background-color: #f4f4f4;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: auto;
+    }
+
+    .listTable {
+        width: 100%;
+        td {
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    }
+
+    .footerSpace {
+        height: 70px;
+    }
+
+
+    .delete {
+        color: rgb(190, 2, 2);
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .delete:hover {
+        color: rgb(190, 2, 2);
+        opacity: 1;
+    }
+
+    th {
+        padding: 5px;
         font-family: 'Playfair Display SC', serif;
+        cursor: pointer;
+        .price {
+            cursor: pointer;
+        }
     }
 
-    ng-map {
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    .arrow-up {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 10px solid white;
+        display: inline-block;
     }
-}
-.individualMap {
-    margin: 0 auto;
-    width: 100% !important; 
-    height: 325px;
-}
+
+    .arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid white;
+        display: inline-block;
+    }
+
+    //////// MAP PAGE //////////////
+
+    .mapAndSearchContainer {
+        background-color: #f4f4f4;
+        padding-bottom: 25px;
+    }
+    .mapContainer {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 25px;
+        display: block !important;
+        ng-map {
+            width: 100% !important;
+        }
+    }
+
+    .search {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    .viewController {
+        width: 100%;
+        // border: 1px solid black;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 0px !important;
+        background-color: white;
+        box-shadow: inset 0px 0px 0px #7c7b7b;
+        
+        
+        h5 {
+            box-shadow: inset 0px 1px 3px white;
+            // padding-left: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            background-color: #373737;
+            border-top-left-radius: 25px;
+            color: white;
+            text-align: center;
+            font-family: 'Playfair Display SC', serif;
 
 
+        }
+    }
 
+    .searchDiv {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 90%;
+        margin: auto;
+        background-color: #f4f4f4;
+    }
 
+    .radios {
+        margin-left: 25px;
+        margin-top: 25px;
+        padding-bottom: 20px;
+    }
 
+    .radio {
+        margin-top: 10px;
+        span {
+            margin-left: 7px;
+        }
+    }
 
+    .selectCat {
+        font-size: 1.25em;
+    }
 
+    //////////// INDIVIDUAL PAGE ///////////////
 
+    .individualImage {
+        img {
+            height: 200px;
+            width: 80%;
+            display: block;
+            margin: auto;
+        }
+    }
 
+    .individualStayPage {
+        background-image: url("../images/miami.jpg");
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-size: cover;
+
+    }
+
+    .individualStayContainer {
+        display: block;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        border-radius: 5px;
+        background-color: rgba(245, 241, 241, 0.75);
+        h3 {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-family: 'Playfair Display SC', serif;
+        }
+    }
+
+    .individualCard {
+        align-self: flex-start;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        width: 100%;
+        text-align: left;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        h6 {
+            padding: 10px;
+            padding-left: 0px;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-family: 'Playfair Display SC', serif;
+
+        }
+        span {
+            padding-left: 10px;
+            white-space: pre-wrap;
+        }
+        .viewSite {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: block;
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+        a {
+            color: #373737;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        button {
+            display: block;
+            margin: auto;
+            width: 100px;
+            margin-bottom: 25px;
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .individualDetail {
+        width: 80%;
+        height: 75px;
+        margin: auto;
+        padding-bottom: 10px;
+        border-bottom: 1.5px solid #f4f4f4;
+    }
+
+    .individualDetailNotes {
+        width: 80%;
+        height: 125px;
+        margin: auto;
+        padding-bottom: 10px;
+        border-bottom: 1.5px solid #f4f4f4;
+    }
+
+    .viewSite {
+        a {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    }
+
+    .individualMapContainer {
+        align-self: flex-start;
+        width: 100%;   
+        margin-top: 35px;
+        h6 {
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Playfair Display SC', serif;
+        }
+
+        ng-map {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+    }
+    .individualMap {
+        margin: 0 auto;
+        width: 100% !important; 
+        height: 325px;
+    }
 }
 
