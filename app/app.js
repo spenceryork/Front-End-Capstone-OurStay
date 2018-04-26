@@ -4,7 +4,6 @@ let isAuth = (AuthFactory) => {
     return new Promise ( (resolve, reject) => {
         AuthFactory.isAuthenticated()
         .then( (ifUser) => {
-            console.log("is user logged in", ifUser);
             if (ifUser) {
                 resolve();
             } else {

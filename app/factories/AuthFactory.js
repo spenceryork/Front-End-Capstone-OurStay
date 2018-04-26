@@ -14,14 +14,12 @@ angular.module("OurStayApp").factory("AuthFactory", (FBcreds ,$q, $location) => 
         .then(function(result){
             var token = result.credential.accessToken;
             var user = result.user.G;
-            // console.log("RESULT",result);
             return user;
         }).catch(function(error){
             var errorCode = error.code;
             var errorMessage = error.message;
             var email = error.email;
             var credential = error.credential;
-            // console.log("error",error);
         });
     };
 
@@ -57,13 +55,9 @@ angular.module("OurStayApp").factory("AuthFactory", (FBcreds ,$q, $location) => 
     };
 
     authObj.isAuthenticated = () => {
-        // console.log("isAuthenticated called AuthFactory");
         return $q((resolve, reject) => {
-        //   console.log("firing onAuthStateChanged");
           firebase.auth().onAuthStateChanged( (user) => {
-            // console.log("onAuthStateChanged finished");
             if (user) {
-            //   console.log("user", user);
               currentUser = user.uid;
               resolve(true);
             } else {

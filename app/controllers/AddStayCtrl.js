@@ -18,9 +18,7 @@ angular.module("OurStayApp").controller("AddStayCtrl", function($scope, FbFactor
     $scope.stay.address = "Nashville, TN, USA";
     
     $scope.placeChanged = function() {
-        let place = this.getPlace();
-        console.log("place data from google", place);
-        
+        let place = this.getPlace();        
         $scope.stay.name = place.name;
         $scope.stay.address = place.formatted_address;
         $scope.stay.website = place.website;

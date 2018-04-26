@@ -6,8 +6,7 @@ angular.module("OurStayApp").controller("AuthCtrl", function($scope, FbFactory, 
     $scope.googleLoginAuth = () => {
         AuthFactory.login()
         .then(user => {
-            // console.log('User: ', user);
-            $window.location = "/#!/home";
+            $window.location = "/#!/add";
         });
     }; 
 
@@ -21,8 +20,6 @@ angular.module("OurStayApp").controller("AuthCtrl", function($scope, FbFactory, 
     });
 
     $scope.registerNewUser = () => {
-        // console.log("is anything happening?", $scope.user);
-        // console.log("what is authObj", AuthFactory);
 
         AuthFactory.createUser($scope.user)
         .then( (user) => {
@@ -38,8 +35,7 @@ angular.module("OurStayApp").controller("AuthCtrl", function($scope, FbFactory, 
     $scope.loginWithEmail = () => {
         AuthFactory.loginUser($scope.user)
         .then(user => {
-            // console.log("logged in user", user);
-            $window.location.href = "#!/home";
+            $window.location.href = "#!/add";
         })
         .catch( (err) => {
             console.log(err);
